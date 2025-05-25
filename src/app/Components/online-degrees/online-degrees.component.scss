@@ -1,0 +1,652 @@
+* {
+    // margin: 0;
+    // padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    
+    font-family: "Source Sans 3", Arial, sans-serif;
+}
+
+$mainColor: #002761;
+$color: #0056d2;
+$secScolor: #f2f5fa;
+$transition: 0.5s;
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* Sec One */
+
+.sec-one {
+    background-color: $mainColor;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+ 
+}
+
+.sec-one h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+
+
+/* Start sec 2 */
+
+.sec-2 {
+    margin-top: 50px;
+}
+
+
+.sec-2 .container .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-2 h2 {
+    font-weight: 600;
+}
+
+.sec-2 .container .content .btn-outline-primary {
+    font-weight: 600;
+    color: $color !important;
+}
+
+.sec-2 .container .content .btn-outline-primary:hover {
+    background-color: white !important;
+    color: $mainColor!important;
+    border-color: $mainColor;
+}
+
+.sec-2 ul {
+    border-bottom: none ;
+}
+
+.sec-2 ul li a {
+    color: $mainColor;
+}
+.sec-2 .container .content ul li a:hover {
+    border-bottom: 2px solid $color !important;
+    color: $color !important;
+}
+
+.sec-2 ul li:not(:first-child):hover {
+    background-color: rgb(232, 247, 242);
+
+}
+
+.sec-2 form {
+    width: max-content;
+    border: 1px solid $color;
+}
+
+.sec-2 form.two {
+    overflow-y: scroll;
+    max-height: 300px;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.sec-2 form ul {
+    padding: 10px;
+}
+
+.sec-2 form ul li {
+    transition: $transition;
+    padding: 10px;
+}
+ 
+.sec-2 form ul li:hover {
+    background-color: rgb(232, 247, 242);
+}
+
+.sec-2 .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid $color;
+}
+
+.sec-2 form.two .buttons {
+    position: sticky;
+    bottom: 0;
+    padding-bottom: 20px;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.sec-2 .buttons .clear:hover {
+    color: $mainColor;
+    text-decoration: underline;
+    text-decoration-color: $mainColor;
+    text-underline-offset: 5px;
+    background-color: rgb(232, 247, 242);
+}
+
+
+
+/* Start Sec 3 */
+
+.sec-3, .sec-5 {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sec-3 .container 
+.sec-5 .container {
+    display: flex;
+    flex-direction: column;
+}
+.sec-3 .container .row, 
+.sec-5 .container .row {
+    row-gap: 18px;
+}
+
+.sec-3 .card, .sec-5 .card {
+   min-height: 300px;
+   height: 100%;
+   width: 95%;
+   padding-top: 15px;
+   border-radius: 15px !important;
+   border: 2px solid rgb(232, 247, 242);
+   transition: $transition;
+   overflow: hidden;
+}
+.sec-3 .card:hover, .sec-5 .card:hover {
+   scale: 1.1;
+   box-shadow: 0 0 40px -8px rgb(0 0 0 / 16%), 
+   0 0 24px -16px rgb(0 0 0 / 16%);
+}
+
+.sec-3 .card .img, 
+.sec-5 .card .img {
+    padding: 10px;
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sec-3 .card-body, 
+.sec-5 .card-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sec-3 .card-body p, .sec-5 .card-body p {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #5b6780;
+}
+
+.sec-3 .card-body p:last-of-type , .sec-5 .card-body p:last-of-type{
+    position: relative;
+    bottom: 0;
+}
+
+.sec-3 .card-body h5, .sec-5 .card-body h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-top: 15px;
+}
+
+
+*[_ngcontent-ng-c2278868835] {
+    margin: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .sec-3 .row {
+        row-gap: 20px;
+    }
+
+    .sec-3 .card {
+        display: flex;
+        width: 100%;
+        flex-direction: row !important;
+        min-height: 150px;
+        margin-bottom: 20px;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .sec-3 .card .img {
+        width: 20%;
+        min-width: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .sec-3 .card .card-body {
+        margin-top: 0;
+    }
+}
+
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  
+    .page-item {
+      margin: 0 5px;
+  
+      .page-link {
+        color: $mainColor;
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+  
+        &:hover {
+          background-color: #f2f5fa;
+          border-color: #c4c7cc;
+        }
+      }
+  
+      &.active .page-link {
+        background-color: $mainColor;
+        color: white;
+        border-color: $mainColor;
+      }
+  
+      &.disabled .page-link {
+        color: #6c757d;
+        pointer-events: none;
+        background-color: #f8f9fa;
+        border-color: #ddd;
+      }
+    }
+  }
+
+
+
+
+
+/* Start Sec 4 */
+
+.sec-4 {
+    margin-top: 50px;
+}
+
+.sec-4 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sec-4 .container .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.sec-4 .container h1 {
+    margin-top: 30px;
+}
+
+.sec-4 .row .card {
+    border: none;
+    background: $secScolor;
+    min-height: 100px;
+    transition: $transition;
+}
+
+.sec-4 .row.cards .card {
+    background: linear-gradient(164deg, $secScolor 63%, $secScolor 65%, rgb(217, 235, 229) 67%, rgb(232, 247, 242) 100%);
+    padding: 20px;
+}
+
+.sec-4 .card:hover {
+    scale: 1.1;
+    box-shadow: 0 0 40px -8px rgb(0 0 0 / 16%), 
+   0 0 24px -16px rgb(0 0 0 / 16%);
+}
+
+.sec-4 .row .col-md-3 .card {
+    background: $secScolor;
+}
+
+
+@media (max-width: 992px) {
+    .sec-4 .row {
+        row-gap: 20px;
+    }
+    .sec-4 .card {
+        padding: 0;
+    }
+    .sec-4 .card h5 {
+        font-size: 14px !important;
+    }
+}
+
+
+
+/* Sec 5 */
+
+
+.sec-5 {
+    margin-top: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sec-5:nth-of-type(even) {
+    background-color: $secScolor;
+}
+
+.sec-5 .info {
+    align-self: center;
+}
+
+@media (max-width: 992px) {
+    .sec-5 .row {
+        row-gap: 20px;
+    }
+
+    .sec-5 .col-lg-3 {
+        align-items: normal;
+    }
+
+    .sec-5 .card {
+        display: flex;
+        flex-direction: row !important;
+        min-height: 150px;
+        margin-bottom: 20px;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .sec-5 .card .img {
+        width: 20%;
+        min-width: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .sec-5 .card .card-body {
+        margin-top: 0;
+    }
+}
+
+
+/* Sec 6 */
+
+.sec-6 {
+    background-color: $mainColor;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sec-6 h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+.sec-6 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.sec-6 .content .video {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sec-6 .content .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.sec-6 .content .info {
+    width: 100%;
+    padding: 20px;
+}
+
+.carousel-control-prev-icon {
+    background-color: #a1a1a1;
+    position: relative;
+    left: -50%;
+    color: $mainColor !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid $mainColor;
+}
+.carousel-control-next-icon {
+    background-color: #a1a1a1;
+    position: relative;
+    right: -50%;
+    color: $mainColor !important;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid $mainColor;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(150%);
+}
+
+
+@media (max-width: 992px) {
+    .sec-6 .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-control-next-icon {
+        width: 30%;
+    }
+    .carousel-control-prev-icon {
+        width: 30%;
+    }
+}
+
+
+/* Sec 7 */
+
+.sec-7 {
+    margin-top: 70px;
+}
+
+.sec-7 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec-7 .container .row {
+    row-gap: 20px;
+}
+
+.sec-7 .card {
+    border: 2px solid $secScolor;
+    transition: $transition;
+    height: 250px;
+}
+
+.sec-7 .card:hover {
+    scale: 1.1;
+    box-shadow: 0 0 40px -8px rgb(0 0 0 / 16%), 
+    0 0 24px -16px rgb(0 0 0 / 16%);
+}
+
+.sec-7 .top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sec-7 .top .img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $secScolor;
+    border-radius: 5px;
+} 
+
+.sec-7 .top .img img {
+    width: 100%;
+}
+
+.sec-7  p {
+    font-size: 13px;
+}
+
+.sec-7 .bottom {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.sec-7 h5 {
+    font-size: 17px;
+}
+
+.sec-7 .bottom h6 {
+    color: black !important;
+    font-size: 15px;
+}
+
+.sec-7 .bottom .img img {
+    border-radius: 50%;
+}
+
+
+
+/* Sec 8 */
+
+
+.sec-8 {
+    margin-top: 70px;
+    background-color: $secScolor;
+    padding: 40px 0;
+}
+
+.sec-8 .container .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sec-8 .container .text a {
+    font-weight: 600;
+}
+.sec-8 .container .text a:hover {
+    text-decoration: underline;
+    color: $color;
+}
+
+.sec-8 .container .row {
+    margin-top: 20px;
+}
+
+.sec-8 .card {
+    transition: $transition;
+}
+
+.sec-8 .card:hover {
+    scale: 1.1;
+    box-shadow: 0 0 40px -8px rgb(0 0 0 / 16%), 
+    0 0 24px -16px rgb(0 0 0 / 16%);
+}
+
+.sec-8 .card h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sec-8 .card p {
+    font-size: 14px;
+}
+
+
+/* Sec 9 */
+
+.sec-9 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.sec-9 .container h1 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .sec-7 .row, 
+    .sec-8 .row, 
+    .sec-9 .row {
+        row-gap: 20px;
+    }
+}
+
+
+.accordion {
+    border: 2px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding-bottom: 10px;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px;
+}
+
+  .toggle-btn {
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+  }

@@ -1,0 +1,137 @@
+<dialog id="EditDialog">
+
+<div class="py-3">
+    <div class="d-flex justify-content-end py-3 pe-4">
+        <button onclick="document.getElementById('EditDialog')?.close()" class="border-0 bg-light">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+      <div class="dialogContent px-5">
+
+
+        <h2 style="    margin: 0px;
+        font-weight: 600;
+         font-size: 1.875rem;
+     
+        line-height: 2.25rem;">Personal details</h2>
+      <p class="my-4" style="font-weight: 400;font-size: 1rem; line-height: 1,5 rem;">Add your personal details as you would like it to appear on your profile.</p>
+     
+    
+      <form (ngSubmit)="updateUserData()">
+     <div class="PhoteParentContainer my-4">
+        <label for="Profile_photo" class="fw-semibold  fs-5">Profile Photo  </label>
+        <div class="PhoteContainer">
+            <div class="profile-img my-3" style="    width: 150px;
+            height: 150px;
+            background: #002761;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+           " *ngIf="userData">{{ userData.username.charAt(0) }}</div>
+
+           
+        </div>
+
+        <!-- <div>
+            <button class="btn btn-primary py-2 px-3 me-3">change photo</button>
+            <button class="btn btn-outline-primary py-2 px-3">remove photo</button>
+        </div> -->
+     </div>
+
+     <label for="FullName" class="fw-semibold fs-5">user Name</label>
+  <input
+    id="FullName"
+    class="form-control my-2 py-2 ps-3 fs-6"
+    name="username"
+    required
+    [(ngModel)]="updatedUserData.username"
+  />
+     <label for="phone" class="fw-semibold fs-5">Phone</label>
+  <input
+    id="phone"
+    class="form-control my-2 py-2 ps-3 fs-6"
+    name="phone"
+    required
+    [(ngModel)]="updatedUserData.phone"
+  />
+    <!-- Location -->
+  <label for="location" class="fw-semibold fs-5">Location</label>
+  <select
+    id="location"
+    name="location"
+    class="form-select my-2 py-2 ps-3 fs-6"
+    required
+    [(ngModel)]="updatedUserData.location"
+  >
+    <option value="">Select location</option>
+ <option value="Egypt">Egypt</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Morocco">Morocco</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="Italy">Italy</option>
+<option value="Spain">Spain</option>
+
+
+  </select>
+
+<!-- 
+   <label for="Pronouns" class="fw-semibold  fs-5">Pronouns  </label>
+   <input id="Pronouns" class="form-control my-2 py-2 ps-3 fs-6" name="Pronouns"  required value="Pronouns"
+/> -->
+
+<hr class="my-5">
+
+
+
+<h2 style="    margin: 0px;
+font-weight: 500;
+ font-size: 1.25rem;
+
+line-height: 2.25rem;">Demographic Information</h2>
+
+
+ <!-- Gender -->
+  <label for="Gender" class="fw-semibold fs-5">Gender</label>
+  <select
+    id="Gender"
+    name="gender"
+    class="form-select my-2 py-2 ps-3 fs-6"
+    required
+    [(ngModel)]="updatedUserData.gender"
+  >
+    <option value="">Select Gender</option>
+    <option value="female">Woman</option>
+    <option value="male">Man</option>
+    
+    <!-- <option value="Non binary">Non binary</option>
+    <option value="Transgender Woman">Transgender Woman</option>
+    <option value="Gender identity not listed">Gender identity not listed</option>
+    <option value="Prefer not to Say">Prefer not to Say</option> -->
+  </select>
+
+<div class="border-start border-4 border-primary ps-3 mb-3 py-3 mt-3" style="background-color: #f0f6ff;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1">    <i class="fa-solid fa-circle-info text-primary fs-5"></i></div>
+            <div class="col-11">
+                <h5 class="mb-1">Why are we asking for this information?</h5>
+                <p class="mb-0">This information will inform Coursera’s ongoing efforts to design an inclusive, learner-centered product.</p>
+            </div>
+        </div>
+    </div>
+
+  
+  </div>
+  
+  
+        <button class="btn btn-primary px-3 py-2 mt-3 fw-bold" type="submit" >Save</button>
+      </form>
+    
+    </div>
+</div>
+</dialog>

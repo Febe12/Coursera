@@ -1,0 +1,292 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid video-container">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 sidebar">
+      <h5>{{ module?.moduleTitle }}</h5>
+      <ul class="list-group list-group-flush">
+        @for (topic of module?.topics; track $index) {
+        <li class="list-group-item">
+          <strong>{{ topic.title }}</strong>
+          <ul class="list-unstyled ms-3 mt-2">
+            @for (currentVideo of topic?.videos; track $index) {
+            <li
+              [ngStyle]="
+                video && video === currentVideo
+                  ? { 'font-weight': 'bold', background: '#e9ecef' }
+                  : {}
+              "
+            >
+              <div class="flex flex-row align-items-center gap-2">
+                @if (currentVideo.isCompleted) {
+                <i class="fa-solid fa-circle-check text-success"></i>
+                } @else {
+                <i class="fa-solid fa-circle text-secondary"></i>
+                }
+                <a
+                  [routerLink]="[
+                    '/courseExplanation',
+                    courseId,
+                    'video-player',
+                    moduleId,
+                    topic._id
+                  ]"
+                  [queryParams]="{ videoId: currentVideo._id }"
+                  class="video-link"
+                >
+                  {{ currentVideo.videoTitle }}
+                </a>
+              </div>
+            </li>
+            } @for (currentAssignment of topic?.assignments; track $index) {
+            <li
+              [ngStyle]="
+                assignement && assignement.data._id === currentAssignment._id
+                  ? { 'font-weight': 'bold', background: '#e9ecef' }
+                  : {}
+              "
+            >
+              <div class="flex flex-row align-items-center gap-2">
+                @if (currentAssignment.isCompleted) {
+                <i class="fa-solid fa-circle-check text-success"></i>
+                } @else {
+                <i class="fa-solid fa-circle text-secondary"></i>
+                }
+                <a
+                  [routerLink]="[
+                    '/courseExplanation',
+                    courseId,
+                    'video-player',
+                    moduleId,
+                    topic._id
+                  ]"
+                  [queryParams]="{ assignmentId: currentAssignment._id }"
+                  class="video-link"
+                >
+                  {{ currentAssignment.title }}
+                </a>
+              </div>
+            </li>
+            }
+          </ul>
+        </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    @if (video) {
+    <div class="col-12 col-md-9 main-content">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h3>{{ video.videoTitle }}</h3>
+          <p class="text-muted">
+            {{ video.discuseion }}
+          </p>
+        </div>
+        <div class="d-flex gap-2">
+          <a
+            class="btn btn-outline-primary"
+            [routerLink]="previousVideoRoute?.route"
+            [queryParams]="previousVideoRoute?.queryParams"
+            [class.disabled]="!previousVideoRoute"
+            [attr.aria-disabled]="!previousVideoRoute"
+            tabindex="{{ !previousVideoRoute ? -1 : 0 }}"
+          >
+            Previous
+          </a>
+          <a
+            class="btn btn-outline-primary"
+            [routerLink]="nextVideoRoute?.route"
+            [queryParams]="nextVideoRoute?.queryParams"
+            [class.disabled]="!nextVideoRoute"
+            [attr.aria-disabled]="!nextVideoRoute"
+            tabindex="{{ !nextVideoRoute ? -1 : 0 }}"
+          >
+            Next
+          </a>
+        </div>
+      </div>
+
+      <!-- Video Player Placeholder -->
+      <div class="video-player">
+        <div class="video-wrapper">
+          <!-- يمكنك استبدال الـ div بـ iframe لاحقًا -->
+          <video
+            #videoPlayer
+            width="100%"
+            height="100%"
+            controls
+            (ended)="onVideoEnded()"
+          >
+            <source [src]="video.url" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="transcript-section mt-4 p-3 bg-light rounded">
+        <h5>Transcript</h5>
+        <div
+          class="transcript-scrollable"
+          style="max-height: 200px; overflow-y: auto"
+        >
+          <ul class="list-unstyled mb-0">
+            <li class="transcript-sentence">{{ video.transeScript }}</li>
+            <li class="transcript-sentence">
+              Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam
+              enim.
+            </li>
+            <li class="transcript-sentence">
+              Eget facilisis quam felis id mauris.
+            </li>
+            <li class="transcript-sentence">
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas.
+            </li>
+            <li class="transcript-sentence">
+              Suspendisse potenti. Etiam ac mauris vitae urna fermentum
+              tincidunt.
+            </li>
+            <li class="transcript-sentence">
+              Mauris euismod, sapien nec laoreet dictum, enim erat dictum erat,
+              nec dictum erat enim nec erat.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    } @if (assignement) {
+    <div class="col-12 col-md-9 main-content">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>{{ assignement.data.title }}</h3>
+        <div class="d-flex gap-2">
+          <a
+            class="btn btn-outline-primary me-2"
+            [routerLink]="previousVideoRoute?.route"
+            [queryParams]="previousVideoRoute?.queryParams"
+            [class.disabled]="!previousVideoRoute"
+            [attr.aria-disabled]="!previousVideoRoute"
+            tabindex="{{ !previousVideoRoute ? -1 : 0 }}"
+          >
+            Previous
+          </a>
+          <a
+            class="btn btn-outline-primary"
+            [routerLink]="nextVideoRoute?.route"
+            [queryParams]="nextVideoRoute?.queryParams"
+            [class.disabled]="!nextVideoRoute"
+            [attr.aria-disabled]="!nextVideoRoute"
+            tabindex="{{ !nextVideoRoute ? -1 : 0 }}"
+          >
+            Next
+          </a>
+        </div>
+      </div>
+      <div class="assignment-questions">
+        <div class="assignment-info mb-4 p-3 bg-light rounded">
+          <p class="mb-2">
+            <strong>Description:</strong> {{ assignement.data.description }}
+          </p>
+          <p class="mb-2">
+            <strong>Passing Score:</strong> {{ assignement.data.passingScore }}%
+          </p>
+          <p class="mb-2">
+            <strong>Time Limit:</strong>
+            {{ assignement.data.timeLimit }} minutes
+          </p>
+          <p class="mb-0">
+            <strong>Retry Delay:</strong>
+            {{ assignement.data.retryDelay }} minutes
+          </p>
+        </div>
+        <form (ngSubmit)="submitAssignment()" #assignmentForm="ngForm">
+          <div
+            *ngFor="
+              let question of assignement.data.questions;
+              let qIdx = index
+            "
+            class="mb-4"
+          >
+            <div class="fw-bold mb-2">
+              {{ qIdx + 1 }}. {{ question.content }}
+            </div>
+            <div *ngIf="question.type === 'msq'">
+              <div
+                *ngFor="let option of question.options; let oIdx = index"
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [id]="'q' + qIdx + '_option' + oIdx"
+                  [name]="'q' + qIdx"
+                  [value]="oIdx"
+                  [(ngModel)]="userAnswers[question._id][oIdx]"
+                  [ngModelOptions]="{ standalone: true }"
+                />
+                <label
+                  class="form-check-label"
+                  [for]="'q' + qIdx + '_option' + oIdx"
+                >
+                  {{ option }}
+                </label>
+              </div>
+            </div>
+            <div *ngIf="question.type === 'truefalse'">
+              <div
+                *ngFor="let option of question.options; let oIdx = index"
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  [id]="'q' + qIdx + '_option' + oIdx"
+                  [name]="'q' + qIdx"
+                  [value]="oIdx"
+                  [(ngModel)]="userAnswers[question._id]"
+                  [ngModelOptions]="{ standalone: true }"
+                />
+                <label
+                  class="form-check-label"
+                  [for]="'q' + qIdx + '_option' + oIdx"
+                >
+                  {{ option }}
+                </label>
+              </div>
+            </div>
+          </div>
+          <button
+            [disabled]="
+              !assignement.canTakeAssignment || successMessage || errorMessage
+            "
+            type="submit"
+            class="btn btn-primary mt-3"
+          >
+            Submit
+          </button>
+          @if (!assignement.canTakeAssignment) {
+          <p class="text-danger mt-3">
+            You cannot retake the assigment yet.
+            <br />
+            You have to wait for {{ assignement.waitTimeInMinutes }} minutes
+            before retaking the assigment.
+          </p>
+          } @if (successMessage) {
+          <div class="alert alert-success mt-3" role="alert">
+            {{ successMessage }}
+          </div>
+          } @if (errorMessage) {
+          <div class="alert alert-danger mt-3" role="alert">
+            {{ errorMessage }}
+          </div>
+          }
+        </form>
+      </div>
+      <div>
+        <div></div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

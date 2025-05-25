@@ -1,0 +1,121 @@
+<div class="mt-5 myLearnParent container-fluid">
+  <h4 class="mt-4 fw-semibold">My learning</h4>
+  <div
+    class="btn-group my-3"
+    role="group"
+    aria-label="Basic radio toggle button group"
+  >
+    <input
+      type="radio"
+      class="btn-check"
+      name="btnradio"
+      id="btnradio1"
+      autocomplete="off"
+      (click)="showInProgress()"
+      checked
+    />
+    <label class="btn btn-outline-primary rounded-pill px-4" for="btnradio1">In progress</label>
+
+    <input
+      type="radio"
+      class="btn-check"
+      name="btnradio"
+      id="btnradio2"
+      (click)="showCompleted()"
+      autocomplete="off"
+    />
+    <label class="btn btn-outline-primary rounded-pill px-4" for="btnradio2">Completed</label>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row gap-5">
+      <div class="col-12 col-lg-7">
+        @for (course of selectedCourses; track $index) {
+        <div class="border rounded-4 p-4 coursesContainer mb-3">
+          <div class="logo d-flex gap-2">
+            <div>
+              <img
+                [src]="course.courseImage"
+                alt=""
+                class="border rounded-3 p-2"
+              />
+            </div>
+            <div>
+              <p class="fw-semibold mt-1">{{ course.organization }}</p>
+            </div>
+          </div>
+          <p
+            class="fw-semibold fs-5 coursename"
+            [routerLink]="'/courseExplanation' + '/' + course._id"
+          >
+            {{ course.name[language] }}
+          </p>
+          <p>Course . {{ course.progress }}% Completed</p>
+          <div
+            class="progress"
+            style="height: 10px"
+            role="progressbar"
+            aria-label="Basic example"
+            [attr.aria-valuenow]="course.progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div
+              class="progress-bar bg-success"
+              [style]="'width: ' + course.progress + '%'"
+            ></div>
+          </div>
+        </div>
+        } @empty {
+        <div class="border rounded-4 p-4 coursesContainer mb-3">
+          <p class="fw-semibold">No courses found</p>
+          <p routerLink="/home" class="fw-semibold">
+            You have not started any courses yet. Explore our course catalog and
+            start learning today!
+          </p>
+        </div>
+        }
+      </div>
+      <div class="col-12 col-lg-4 profileContainer">
+        <div class="row">
+          <div class="col-lg-12 mb-lg-2 col-6 border rounded-4 p-4 profileCard">
+            <div class="d-block d-sm-flex d-md-block align-items-center gap-2">
+              <div class="avatar">
+                <span class="AvatarText" *ngIf="userData">{{
+                  userData.username.charAt(0)
+                }}</span>
+
+                <!-- <div *ngIf="userName" class="user-info">
+              <p> {{ userName }}</p>
+            </div> -->
+              </div>
+              <p class="fw-bold fs-6 mb-2" *ngIf="userData">
+                {{ userData.username }}
+              </p>
+            </div>
+            <p>
+              Your career goal is to explore topics outside of work as a
+              Front-end Application Design
+            </p>
+          </div>
+
+          <div class="col-lg-12 col-6 border rounded-4 p-4 progressCard">
+            <div class="d-block d-sm-flex d-md-block align-items-center gap-2">
+              <p class="fw-bold fs-6 mb-2">Weekly goal progress tracker</p>
+              <p>
+                Learners with goals are 75% more likely to complete their
+                courses. Set a weekly goal now to take charge of your learning
+                journey and boost your success!
+              </p>
+            </div>
+            <div>
+              <button type="button" class="btn btn-outline-primary">
+                set your weekly goal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

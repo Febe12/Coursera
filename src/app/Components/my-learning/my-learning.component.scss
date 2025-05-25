@@ -1,0 +1,92 @@
+$blackColor: black;
+$whiteColor: white;
+$grayColor: #f2f5fa;
+$textGrayColor: #5b6780;
+$lightGray: #8495b0;
+$primary-color: rgb(0, 37, 93);
+$blueColor: blue;
+.myLearnParent {
+  width: 95%;
+  margin: 0 auto;
+  button {
+    border: 1px solid $lightGray;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #cce4f7;
+      color: $blueColor;
+      border: 1px solid $blueColor;
+    }
+  }
+
+  .coursesContainer {
+    border-radius: 4px;
+    padding: 1rem;
+
+    .logo {
+      display: flex;
+      gap: 1rem;
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+    }
+
+    p:nth-child(2) {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    p:nth-child(3) {
+      color: $textGrayColor;
+    }
+
+    .resumePart {
+      padding: 1rem 1rem 0 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+      p:nth-child(2) {
+        color: $textGrayColor;
+        font-size: 11px;
+      }
+      button {
+        @media (max-width: 600px) {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 5%;
+        }
+      }
+    }
+  }
+
+  .profileContainer {
+    .profileCard {
+      .avatar {
+        border-radius: 50%;
+        background-color: #002761;
+        width: 36px;
+        height: 36px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 1rem;
+        font-family: Source Sans Pro, Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        .AvatarText {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+    .progressCard {
+      p:nth-child(2) {
+        font-size: 14px;
+        color: $textGrayColor;
+      }
+    }
+  }
+}

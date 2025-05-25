@@ -1,0 +1,83 @@
+.NavScroll {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    border-bottom: none;
+  }
+  .nav-link{
+    color: #5b6780 !important;
+    padding: 12px !important;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family:  Source Sans Pro,Arial,sans-serif;
+    font-weight: bold;
+  }
+  .NavScroll2 {
+    position: sticky;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white !important;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .NavScroll, .NavScroll2 {
+    box-shadow: none;
+  }
+  
+  .explore {
+    width: 120px;
+  }
+  
+  .search-container {
+    width: 400px;
+    max-width: 100%;
+  }
+  
+  .navbar{
+    padding: 0 48px;
+  }
+  .SecondNav a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .SecondNav a.active {
+    color: #0056b3 !important;
+    font-weight: bold !important;
+    border-bottom: 3px solid #0056b3;
+  }
+  
+  
+  .search {
+    border-radius: 20px;
+    border: 1px solid gray;
+    height: 40px;
+    padding-left: 15px;
+  }
+  
+  .SearchIcon {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .IconWidth {
+    font-size: 22px;
+  }
+  
+  .ProgImg {
+    width: 35px;
+    height: 35px;
+  }
+  

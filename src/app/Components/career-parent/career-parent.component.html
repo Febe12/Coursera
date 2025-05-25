@@ -1,0 +1,115 @@
+<div class="container-fluid px-5 ">
+    <div class="RolesParent">
+      <h1 class="roles ">Explore roles</h1>
+      <p>
+        Advance in your career with recognized credentials across levels. Choose
+        from 40+ roles.
+      </p>
+   <div class="overflow-x-auto">
+
+    <div class="buttons d-flex w-100 align-items-center flex-nowrap  mt-3">
+      <!-- <div class="dropdown">
+        <button
+          class="btn dropdown-toggle rounded-pill px-3 py-1 btn-sm fw-semibold"
+          type="button"
+          data-bs-toggle="dropdown"
+        >
+          Begginer
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Begginer</a></li>
+          <li><a class="dropdown-item" href="#">Intermediate</a></li>
+          <li><a class="dropdown-item" href="#">Advanced</a></li>
+        </ul>
+      </div> -->
+
+      <div class="buttons-container d-flex flex-nowrap gap-2">
+        <button
+          class="btn rounded-pill btn-sm fw-semibold px-2"
+          [class.active]="sendedValueFromParent === ''"
+          (click)="sendedValueFromParent = ''"
+        >
+          All
+        </button>
+
+        @for ( cat of CareerCoursescategories.slice(0,5) ; track cat.categoryID){
+
+        <button
+          class="btn rounded-pill btn-sm fw-semibold py-1 px-2"
+          [class.active]="sendedValueFromParent === cat.categoryID"
+          (click)="sendedValueFromParent = cat.categoryID;"
+        >
+          {{ cat.categoryName }}
+        </button>
+
+        }
+      </div>
+    </div>
+   </div>
+   
+    </div>
+  
+    <app-career  [attr.key]="sendedValueFromParent" [filtervalue]="sendedValueFromParent"></app-career>
+  
+    <!-- career resources
+    <div class="CareerResourse">
+      <h2 class="mb-4 CareerResouresHeader">Career resources</h2>
+  
+      <div class="buttons-container d-flex flex-wrap gap-2">
+        @for (Resoursescat of CareerResourseCategory; track
+        Resoursescat.categoryID) {
+        <button
+          class="btn rounded-pill fw-semibold py-1 px-2"
+          [class.active]="selectedCategory === Resoursescat.categoryID"
+          (click)="selectResours(Resoursescat.categoryID)"
+        >
+          {{ Resoursescat.categoryName }}
+        </button>
+        }
+      </div>
+  
+      <div class="container-fluid px-0 mx-0">
+        <div class="row gap-3">
+          @for (resource of CareerResourses.slice(0, visibleCoursesCount); track
+          resource.id) { @if (selectedCategory === '' || selectedCategory ===
+          resource.categoryID) {
+  
+          <div class="CareerResoursesCard mb-4 rounded-4 py-4">
+            <h6 class="fw-bold mb-2">{{ resource.question }}</h6>
+            <p>{{ resource.answer }}</p>
+            <p>{{ resource.date }}</p>
+          </div>
+  
+          } }
+        </div>
+      </div>
+  
+      <div class="container-fluid my-4 toggleShowMore mb-4 pb-5 px-0">
+        <button
+          class="rounded text-primary border border-primary px-4 py-3 bg-light"
+          (click)="toggleShowMore()"
+        >
+          {{ visibleCoursesCount > 4 ? "Show fewer" : "Show 6 more" }}
+        </button>
+      </div>
+    </div> -->
+
+       
+  <app-career-resourses></app-career-resourses>
+  
+<!-- success stories -->
+      <h2 class="mb-4">Success Stories</h2>
+       
+  <app-success-stories></app-success-stories>
+    <!-- last part  -->
+  
+    <div class="lastPartContainer">
+      <p class="lastPart">
+        ¹ Median salary and job opening data are sourced from Lightcast™ Job
+        Postings Report. Content Creator, Machine Learning Engineer and Salesforce
+        Development Representative (1/1/2024 - 12/31/2024) <br />
+        All other job roles (3/1/2024 - 3/1/2025)
+      </p>
+    </div>
+  </div>
+  

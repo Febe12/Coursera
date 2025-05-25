@@ -1,0 +1,277 @@
+<app-navbar></app-navbar>
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <nav class="navbar navbar-expand-md bg-light d-md-none">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      class="col-12 col-md-3 left-sidebar collapse d-md-block"
+      id="sidebarMenu"
+    >
+      <div class="sidebar-content">
+        <h5 class="mb-2 fw-bold">{{ courseDetails?.name?.[language] }}</h5>
+        <p class="mb-5 gray-text">{{ courseDetails?.organization }}</p>
+
+        <ul>
+          <li>
+            <div class="card-body Course-Material-card">
+              <p class="fw-bold mb-0">
+                <button
+                  class="Course-Material border-0 bg-transparent d-flex align-items-center fs-5 fw-semibold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#courseMaterialCollapse"
+                  aria-expanded="false"
+                  aria-controls="courseMaterialCollapse"
+                  (click)="toggleArrow()"
+                >
+                  <i
+                    id="arrow"
+                    class="fa-solid fa-chevron-right me-3 fw-bold transition"
+                  ></i>
+                  Course Material
+                </button>
+              </p>
+
+              <div class="collapse modules mt-2" id="courseMaterialCollapse">
+                <div class="card-body p-0">
+                  <ul
+                    class="gap-1 d-flex flex-column Course-Material-list list-unstyled"
+                  >
+                    @for (module of courseDetails?.modules; track $index) {
+                    <li
+                      (click)="selectModule(module)"
+                      class="list-group-item border-0 mt-3"
+                    >
+                      @if (module.isCompleted) {
+                      <i class="fa-solid fa-circle-check text-success"></i>
+                      } @else {
+                      <i class="fa-solid fa-circle text-secondary"></i>
+                      } Module
+                      {{ $index + 1 }}
+                    </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><p class="fw-bold fs-6">Grades</p></li>
+          <li><p class="fw-bold fs-6">Notes</p></li>
+          <li><p class="fw-bold fs-6">Discussion Forums</p></li>
+          <li><p class="fw-bold fs-6">Messages</p></li>
+          <li><p class="fw-bold fs-6">Course Info</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-9 d-flex flex-column h-100">
+      <div
+        class="scrollable-wrapper d-flex flex-column flex-md-row flex-grow-1 overflow-auto"
+      >
+        <div class="col-12 col-md-7 m-md-4 main-content border rounded">
+          <div
+            class="accordion accordionContainer p-3 border border-1"
+            id="accordion-module"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header header">
+                <button
+                  class="accordion-button mb-3 pe-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-module"
+                  aria-expanded="true"
+                  aria-controls="collapse-module"
+                >
+                  <h3 class="py-3 ps-2">{{ selectedModule?.moduleTitle }}</h3>
+                </button>
+              </h2>
+              <div
+                id="collapse-module"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordion-module"
+              >
+                <div class="accordion-body">
+                  <div class="accordion" id="collapse-topic">
+                    @for (topic of selectedModule?.topics; track $index) {
+                    <div class="accordion-item mb-3">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button p-3"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          [attr.data-bs-target]="'#collapse' + topic._id"
+                          aria-expanded="false"
+                          [attr.aria-expanded]="false"
+                          [attr.aria-controls]="'collapse' + topic._id"
+                        >
+                          <span class="me-2">
+                            @if (topic.isCompleted) {
+                            <i
+                              class="fa-solid fa-circle-check text-success"
+                            ></i>
+                            } @else {
+                            <i class="fa-solid fa-circle text-secondary"></i>
+                            }
+                          </span>
+                          {{ topic.title }}
+                        </button>
+                      </h2>
+                      <div
+                        [attr.id]="'collapse' + topic._id"
+                        class="accordion-collapse collapse show py-2"
+                      >
+                        <div class="accordion-body">
+                          @for (video of topic.videos; track $index) {
+                          <div
+                            class="row body px-2"
+                            [routerLink]="
+                              'video-player/' +
+                              selectedModule?._id +
+                              '/' +
+                              topic._id
+                            "
+                            [queryParams]="{ videoId: video._id }"
+                          >
+                            <div
+                              class="col-1 d-flex align-items-center justify-content-center"
+                            >
+                              @if (video.isCompleted) {
+                              <i
+                                class="fa-solid fa-circle-check text-success"
+                              ></i>
+                              } @else {
+                              <i class="fa-solid fa-film"></i>
+                              }
+                            </div>
+                            <div class="col-11 video-title">
+                              <p class="fw-bold">
+                                {{ video.videoTitle }}
+                              </p>
+
+                              <p>
+                                Video . {{ formatSecondsToHMS(video.duration) }}
+                              </p>
+                            </div>
+                          </div>
+                          } @for (assignment of topic.assignments; track $index)
+                          {
+                          <div
+                            class="row body px-2"
+                            [routerLink]="
+                              'video-player/' +
+                              selectedModule?._id +
+                              '/' +
+                              topic._id
+                            "
+                            [queryParams]="{ assignmentId: assignment._id }"
+                          >
+                            <div
+                              class="col-1 d-flex align-items-center justify-content-center"
+                            >
+                              @if (assignment.isCompleted) {
+                              <i
+                                class="fa-solid fa-circle-check text-success"
+                              ></i>
+                              } @else {
+                              <i class="fa-solid fa-film"></i>
+                              }
+                            </div>
+                            <div class="col-11 video-title">
+                              <p class="fw-bold">
+                                {{ assignment.title }}
+                              </p>
+
+                              <p>
+                                Assignment .
+                                {{
+                                  formatSecondsToHMS(assignment.retryDelay * 60)
+                                }}
+                              </p>
+                            </div>
+                          </div>
+                          }
+                        </div>
+                      </div>
+                    </div>
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4 right-sidebar border rounded rounded-4 mt-4"
+        >
+          <div
+            class="bg-primary border rounded-top p-4 text-light ProfessionalCertificate"
+          >
+            <h5>Upgrade to this Professional Certificate</h5>
+          </div>
+
+          <div class="list p-4 row">
+            <div class="col-1 mb-3">
+              <i class="fa-solid fa-circle text-primary"></i>
+            </div>
+            <div class="col-11 mb-3">
+              Full access to all courses in this Professional Certificate
+            </div>
+            <div class="col-1 mb-3">
+              <i class="fa-solid fa-circle text-primary"></i>
+            </div>
+            <div class="col-11 mb-3">
+              Graded assessments to measure your progress
+            </div>
+            <div class="col-1 mb-3">
+              <i class="fa-solid fa-circle text-primary"></i>
+            </div>
+            <div class="col-11 mb-3">
+              A certificate to feature on your resume
+            </div>
+            <div class="col-1 mb-3">
+              <i class="fa-solid fa-circle text-primary"></i>
+            </div>
+            <div class="col-11 mb-3">
+              $49/mo after a free trial, cancel anytime
+            </div>
+          </div>
+
+          <div class="mx-4 px-3 border rounded rounded-3 profilecard pb-4">
+            <div class="row py-4">
+              <div class="col-4 ps-3">
+                <img
+                  src="https://coursera_assets.s3.amazonaws.com/images/3c78f24b2f164bbf54769d1d35bcedd9.jpg"
+                  alt=""
+                  style="width: 70px"
+                />
+              </div>
+              <div class="col-8 ps-3 pt-3">
+                <h6 class="fw-bold">Siddhant S.</h6>
+              </div>
+            </div>
+
+            <p class="px-3">
+              “I got into two summer internships and received a job offer for a
+              data scientist role by sharing my Coursera certificates.“
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

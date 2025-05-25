@@ -1,0 +1,266 @@
+
+$blackColor: black;
+$lightGray: #8495b0;
+$blueColor: blue;
+$baseGray: #5b6780;
+$whiteColor:white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.DetailFirstContainer{
+    h1{
+        font-weight: 600; font-size: 3rem; margin-bottom: 4%;
+    }
+       
+    p:nth-of-type(1) {
+        font-weight: 600; font-size: 1.1rem; margin-bottom: 3%;
+    }
+    p:nth-of-type(2) {
+        font-size:  0.875rem; margin-bottom: 3%;
+    }
+    span:nth-of-type(1){
+        font-weight: bolder; font-size:  0.875rem; margin-bottom: 3%;
+    }
+    span:nth-of-type(2){
+        font-size:  0.875rem;
+    }
+
+
+}
+
+.RecommendedcredentialsContainer{
+
+.RecommendedHeaderParent{
+   margin-top: 3%;
+   .RecommendedHeader{
+  font-weight: 600; font-size: 1.875rem; margin-bottom: 4%;
+   }
+
+   .RecommendedContentParent{
+.LinkSide{
+    .Link{
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+       h3{
+        &:hover{
+          text-decoration: underline;
+      } 
+       }
+        .IconPart{
+
+            img{
+                width: 30%;
+            }
+        }
+
+        h3{
+            font-size: 1.875rem;
+        }
+
+
+        .Recommended_First_Rating_reviews{
+            .Recommended_First_Rating_reviews_div{
+
+                span:nth-of-type(2){
+
+                    color: $baseGray;
+                }
+            }
+         .Recommended_second_Rating_reviews_div{
+            span{
+                color: $baseGray;
+            }
+         }
+
+        }
+    }
+
+
+    .RecommendedButtonsContainer{
+       
+        
+          .VeiwButton{
+            a{
+                text-decoration: none;
+                padding:7%;
+
+                &:hover{
+    
+                    text-decoration: underline;
+                  background-color: rgb(200, 200, 255);
+                   
+                }
+            }
+
+        
+          }
+      
+    }
+}
+
+
+
+.ImagesSideContainer{
+.ImageSideDiv{
+   flex-wrap: nowrap; overflow-x: hidden;
+
+.ImageSide_Content_div {
+  width: 91%;
+
+  h6 {
+    height: 70px;
+    margin-top: 9%;
+     min-height: 30px; 
+    // overflow: hidden;
+    font-size: .875rem; 
+  }
+
+  p {
+    color: $baseGray;
+    font-size: .875rem;
+     min-height: 30px;
+    overflow: hidden; 
+  }
+
+  // less than 580
+  @media (max-width: 580px) {
+    h6 {
+      font-size: 0.43rem !important; 
+    }
+    p {
+      font-size: 0.5rem !important; 
+    }
+  }
+}
+
+}
+
+}
+
+   }
+}
+
+}
+
+// $blackColor: black;
+// $lightGray: #8495b0;
+// $blueColor: blue;
+// $baseGray: #5b6780;
+// $whiteColor: white;
+
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+.CourseParent {
+  min-height: 100%;
+  border-color: #8495b0 !important;
+
+  .CourseContent {
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #5b6780;
+    }
+
+    .LikeContainer {
+      span:nth-child(1) {
+        font-weight: 700;
+        font-size: 0.875rem;
+        margin-right: 4px;
+      }
+
+      span:nth-child(2) {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: #5b6780;
+      }
+    }
+  }
+
+  &:hover {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.04);
+    box-shadow: 0 0 12px $lightGray;
+    cursor: pointer;
+  }
+
+  @media (max-width: 750px) {
+    flex-direction: row-reverse !important;
+
+    .imageContainer {
+      width: 30%;
+      padding: 10px;
+
+      img {
+        border-radius: 12px;
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+      }
+    }
+
+    .CourseContent {
+      width: 70%;
+
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // less than 563px
+  @media (max-width: 563px) {
+    .CourseContent {
+      h5 {
+        font-size: .8rem !important;
+      }
+
+      p {
+        font-size: 0.5rem !important;
+      }
+
+      .LikeContainer {
+        span {
+          font-size: 0.5rem !important;
+        }
+      }
+    }
+  }
+}
+
+.career-resources-container{
+
+  width: 90%;
+  margin:auto
+}
+
+
+
+
+.lastPartContainer{
+    margin-top: 6%;
+    margin-bottom: 4%;
+   .lastPart{
+     color: $baseGray;
+     
+     width: 50%;
+     font-size:  0.875rem;
+     font-weight: 400;
+     padding: 0 1% 0 1%;
+     
+     }
+ }
+

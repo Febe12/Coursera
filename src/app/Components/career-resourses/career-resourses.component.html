@@ -1,0 +1,57 @@
+<!-- career resources -->
+<div class="CareerResourse">
+  <h2 class="mb-4 CareerResouresHeader">Career resources</h2>
+
+  <!-- Buttons to filter resources by category -->
+  <div class="buttons-container d-flex flex-wrap gap-2">
+    <button
+      class="btn rounded-pill fw-semibold py-1 px-2"
+      *ngFor="let Resoursescat of CareerResourseCategory"
+      [class.active]="selectedCategory === Resoursescat._id"
+      (click)="selectResours(Resoursescat._id)"
+    >
+      {{ Resoursescat.categoryName }}
+    </button>
+  </div>
+
+  <!-- Resources Display -->
+  <!-- <div class="container-fluid px-0 mx-0">
+    <div class="row  d-flex ">
+      <div *ngFor="let resource of CareerResourses.slice(0, visibleCoursesCount); trackBy: trackByFn">
+        <div class="CareerResoursesCard mb-4 rounded-4 py-4  ">
+          <h6 class="fw-bold mb-2">{{ resource.question }}</h6>
+          <p>{{ resource.answer }}</p>
+          <p>{{ resource.date | date }}</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div
+  class="container-fluid px-0 mx-0">
+<div class="row gap-lg-2 gap-md-2  d-lg-flex ">
+    @for(resource  of CareerResourses.slice(0, visibleCoursesCount);track resource._id){
+
+        
+        <div class=" col-12 col-md-3 col-lg-3 CareerResoursesCard  rounded-3 border p-3 mb-4 ">
+              <h6 class="fw-bold mb-2">{{ resource.question }}</h6>
+          <p>{{ resource.answer }}</p>
+          <p>{{ resource.date | date }}</p>
+        </div>
+    }
+</div>
+
+</div>
+ 
+
+  <!-- Show more button -->
+  <div class="container-fluid my-4 toggleShowMore mb-4 pb-5 px-0">
+    <button
+      class="rounded text-primary border border-primary px-4 py-3 bg-light"
+      (click)="toggleShowMore()"
+    >
+      {{ visibleCoursesCount > 4 ? "Show fewer" : "Show 6 more" }}
+    </button>
+  </div>
+</div>

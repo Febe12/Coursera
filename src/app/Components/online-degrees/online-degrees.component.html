@@ -1,0 +1,629 @@
+
+
+<!-- Start Sec one  -->
+
+<div class="sec-one ">
+    <div class="container-fluid ">
+       <h1>Take your career to the next level with an online degree</h1>
+    </div>
+</div>
+
+<!-- Start Sec Two -->
+
+
+
+<div class="sec-2">
+    <div class="container">
+      <h2>Find the right degree for you</h2>
+      <div class="row">
+        <div class="content">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Filter by</a>
+            </li>
+  
+            <!-- Program Level Filter -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false" data-bs-auto-close="outside">
+                Program Level
+              </a>
+              <form class="dropdown-menu" (submit)="applyFilters($event)">
+                <ul>
+                  @for ( level of levels; track level) {
+                    <li>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" [id]="'level' + level" (change)="toggleLevel(level)">
+                        <label class="form-check-label" [for]="'level' + level">
+                          {{ level }}
+                        </label>
+                      </div>
+                    </li>
+                  }
+                </ul>
+                <div class="buttons">
+                  <button type="submit" class="btn btn-primary">Apply</button>
+                  <button type="reset" class="btn clear" (click)="clearFilters()">Clear all</button>
+                </div>
+              </form>
+            </li>
+  
+            <!-- Subject Filter -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false" data-bs-auto-close="outside">
+                Subject
+              </a>
+              <form class="dropdown-menu two" (submit)="applyFilters($event)">
+                <ul>
+                  @for ( subject of subjects; track subject) {
+                    <li>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" [id]="'subject' + subject" (change)="toggleSubject(subject)">
+                        <label class="form-check-label" [for]="'subject' + subject">
+                          {{ subject }}
+                        </label>
+                      </div>
+                    </li>
+                  }
+                </ul>
+                <div class="buttons">
+                  <button type="submit" class="btn btn-primary">Apply</button>
+                  <button type="reset" class="btn clear" (click)="clearFilters()">Clear all</button>
+                </div>
+              </form>
+            </li>
+          </ul>
+  
+          <button type="button" class="btn btn-outline-primary">Email me info</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!-- Start Sec Three -->
+
+<div class="sec-3">
+
+    <div class="container">
+        <div class="row">
+            @for(degree of displayedDegrees; track $index ){
+    
+                    <div class="col-lg-3 col-sm-12" >
+    
+                        <a href="{{degree.link}}" target="_blank">
+    
+                            <div class="card p-3">
+    
+
+
+                                    <div class="img p-3">
+                                        <img [src]="degree.degreeImage" class="card-img-top" alt="img" >
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <p>{{degree.name}}</p>
+                                            <h5 class="card-title">{{degree.degree}}</h5>
+                                            <p class="card-text">{{degree.description}}</p>
+                                        </div>
+                                        <p class="card-text">{{degree.duration}}</p>
+                                    </div>
+        
+                            </div>
+    
+                        </a>
+    
+                </div>
+    
+    
+            }
+    
+        </div>
+    
+    
+    </div>
+
+ <!-- Pagination -->
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      <!-- Previous Button -->
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <button class="page-link" (click)="prevPage()" [disabled]="currentPage === 1"><span aria-hidden="true">&laquo;</span></button>
+      </li>
+  
+      <!-- Page Numbers -->
+      @for (page of pages; track page) {
+        <li class="page-item" [class.active]="page === currentPage">
+          <button class="page-link" (click)="goToPage(page)">{{ page }}</button>
+        </li>
+      }
+  
+      <!-- Next Button -->
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <button class="page-link" (click)="nextPage()" [disabled]="currentPage === totalPages"><span aria-hidden="true">&raquo;</span></button>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+ <!-- Sec 4 -->
+
+<div class="sec-4">
+    <div class="container">
+        <h1>Browse by program level</h1>
+        <div class="row cards">
+            @for(deg of Degs; track $index) {
+
+                <div class="col-md-4 col-sm-4">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">{{deg.title}}</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+
+            }
+        </div>
+        <h1>Browse by category</h1>
+        <div class="row cat">
+            @for (cat of Category; track $index) {
+
+                <div class="col-md-3 col-sm-3">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">{{cat.title}}</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Sec 5 -->
+
+<div class="sec-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-12 info">
+                <h3>Affordable tuition with flexible payment options</h3>
+                <p>Pursue your degree with affordable tuition, flexible payment options that let you pay as you go, and financial aid opportunities, including scholarships.</p>
+            </div>
+
+            @for(col of collection1; track $index ){
+    
+                    <div class="col-lg-3 col-sm-12" >
+    
+                        <a href="#">
+    
+                            <div class="card p-3">
+    
+
+
+                                    <div class="img p-3">
+                                        <img [src]="col.degreeImage" class="card-img-top" alt="img" >
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <p>{{col.name}}</p>
+                                            <h5 class="card-title">{{col.degree}}</h5>
+                                            <p class="card-text">{{col.description}}</p>
+                                        </div>
+                                        <p class="card-text">{{col.duration}}</p>
+                                    </div>
+        
+                            </div>
+    
+                        </a>
+    
+                </div>
+    
+    
+            }
+    
+        </div>
+    
+    
+    </div>
+</div>
+<div class="sec-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-12 info">
+                <h3>Designed for working adults</h3>
+                <p>Enroll in flexible, 100% online degree programs. Set your own schedule to balance your work and personal commitments and complete coursework at your own pace.</p>
+            </div>
+
+            @for(col of collection2; track $index ){
+    
+                    <div class="col-lg-3 col-sm-12" >
+    
+                        <a href="#">
+    
+                            <div class="card p-3">
+    
+
+
+                                    <div class="img p-3">
+                                        <img [src]="col.degreeImage" class="card-img-top" alt="img" >
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <p>{{col.name}}</p>
+                                            <h5 class="card-title">{{col.degree}}</h5>
+                                            <p class="card-text">{{col.description}}</p>
+                                        </div>
+                                        <p class="card-text">{{col.duration}}</p>
+                                    </div>
+        
+                            </div>
+    
+                        </a>
+    
+                </div>
+    
+    
+            }
+    
+        </div>
+    
+    
+    </div>
+</div>
+<div class="sec-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-12 info">
+                <h3>Quality learning from world-class universities</h3> 
+                <p>Unlock your potential and pave the way to a successful career by earning a degree from an accredited university. Learn from expert faculty passionate about helping you achieve your goals.</p>
+            </div>
+
+            @for(col of collection3; track $index ){
+    
+                    <div class="col-lg-3 col-sm-12" >
+    
+                        <a href="#">
+    
+                            <div class="card p-3">
+    
+
+
+                                    <div class="img p-3">
+                                        <img [src]="col.degreeImage" class="card-img-top" alt="img" >
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <p>{{col.name}}</p>
+                                            <h5 class="card-title">{{col.degree}}</h5>
+                                            <p class="card-text">{{col.description}}</p>
+                                        </div>
+                                        <p class="card-text">{{col.duration}}</p>
+                                    </div>
+        
+                            </div>
+    
+                        </a>
+    
+                </div>
+    
+    
+            }
+    
+        </div>
+    
+    
+    </div>
+</div>
+<div class="sec-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-12 info">
+                <h3>Start making progress toward a degree today</h3>
+                <p>Discover flexible degree pathways that enable you to build new skills and gain career certificates while making progress and earning credit toward eligible degree programs.</p>
+            </div>
+
+            @for(col of collection4; track $index ){
+    
+                    <div class="col-lg-3 col-sm-12" >
+    
+                        <a href="#">
+    
+                            <div class="card p-3">
+    
+
+
+                                    <div class="img p-3">
+                                        <img [src]="col.degreeImage" class="card-img-top" alt="img" >
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <p>{{col.name}}</p>
+                                            <h5 class="card-title">{{col.degree}}</h5>
+                                            <p class="card-text">{{col.description}}</p>
+                                        </div>
+                                        <p class="card-text">{{col.duration}}</p>
+                                    </div>
+        
+                            </div>
+    
+                        </a>
+    
+                </div>
+    
+    
+            }
+    
+        </div>
+    
+    
+    </div>
+</div>
+<div class="sec-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-12 info">
+                <h3>Gain admission without an application</h3>
+                <p>Complete university-approved content to qualify for performance-based admission to select degree programs and earn credit toward your degree. No application or prior work experience is required to start these degree pathways.</p>
+            </div>
+
+            @for(col of collection5; track $index ){
+    
+                    <div class="col-lg-3 col-sm-12" >
+    
+                        <a href="#">
+    
+                            <div class="card p-3">
+    
+
+
+                                    <div class="img p-3">
+                                        <img [src]="col.degreeImage" class="card-img-top" alt="img" >
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <p>{{col.name}}</p>
+                                            <h5 class="card-title">{{col.degree}}</h5>
+                                            <p class="card-text">{{col.description}}</p>
+                                        </div>
+                                        <p class="card-text">{{col.duration}}</p>
+                                    </div>
+        
+                            </div>
+    
+                        </a>
+    
+                </div>
+    
+    
+            }
+    
+        </div>
+    
+    
+    </div>
+</div>
+
+
+ <!-- Sec 6 -->
+
+ <div class="sec-6">
+        
+    <div class="container">
+        <h1>Hear why students enjoy learning on Coursera</h1>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                 <div class="content">
+                    <div class="video">
+                        <video src="#" controls poster="1.jpg"></video>
+                    </div>
+                    <div class="info">
+                        <p>" The program was an opportunity for me to enhance my capacity to be a problem-solver on a global scale...I get to do a lot of hands-on projects. As a student getting into a new field, you want to build a lot of confidence."</p>
+                        <h3>Angela Wen</h3>
+                    </div>
+                 </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content">
+                    <div class="video">
+                        <video src="#" controls poster="2.jpg"></video>
+                    </div>
+                    <div class="info">
+                        <p>" The program was an opportunity for me to enhance my capacity to be a problem-solver on a global scale...I get to do a lot of hands-on projects. As a student getting into a new field, you want to build a lot of confidence. "</p>
+                        <h3>Adam </h3>
+                    </div>
+                 </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content">
+                    <div class="video">
+                        <video src="#" controls poster="3.jpg"></video>
+                    </div>
+                    <div class="info">
+                        <p>" The program was an opportunity for me to enhance my capacity to be a problem-solver on a global scale...I get to do a lot of hands-on projects. As a student getting into a new field, you want to build a lot of confidence."</p>
+                        <h3>John</h3>
+                    </div>
+                 </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content">
+                    <div class="video">
+                        <video src="#" controls poster="4.jpg"></video>
+                    </div>
+                    <div class="info">
+                        <p>" The program was an opportunity for me to enhance my capacity to be a problem-solver on a global scale...I get to do a lot of hands-on projects. As a student getting into a new field, you want to build a lot of confidence."</p>
+                        <h3>Angela Wen</h3>
+                    </div>
+                 </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content">
+                    <div class="video">
+                        <video src="#" controls poster="5.jpg"></video>
+                    </div>
+                    <div class="info">
+                        <p>" The program was an opportunity for me to enhance my capacity to be a problem-solver on a global scale...I get to do a lot of hands-on projects. As a student getting into a new field, you want to build a lot of confidence. "</p>
+                        <h3>Angela Wen</h3>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-angle-left"></i></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</div>
+
+
+ <!-- Sec 7 -->
+
+ <div class="sec-7">
+    <div class="container">
+        <h1>Learn from expert faculty</h1>
+        <div class="row">
+            @for(ex of experts; track $index) {
+
+                <div class="col-lg-4 col-sm-12">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="top">
+                                    <div class="img"> 
+                                        <img [src]="ex.img1" alt="img">
+                                    </div>
+                                    <p class="card-text">{{ex.university}}</p>
+                                </div>
+                              <h5 class="card-title">{{ex.degree}}</h5>
+                              <div class="bottom">
+                                <div class="img">
+                                    <img [src]="ex.img2" alt="img">
+                                </div>
+                                <div class="info">
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ex.name}}</h6>
+                                    <p class="card-text">{{ex.description}}</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+ <!-- Sec 8 -->
+
+ <div class="sec-8">
+    <div class="container">
+        <div class="text">
+            <h1>Gain helpful insight on degree-related topics</h1>
+            <a href="#">Explore all articles</a>
+        </div>
+        <div class="row">
+                @for (topic of topics; track $index) {
+
+                    <div class="col-lg-3 col-sm-12">
+                        <a href="#">
+                            <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{topic.title}}</h5>
+                                  <p class="card-text">{{topic.description}}</p>
+                                  <p class="card-text">{{topic.updateDate}} </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                }
+        </div>
+    </div>
+</div>
+
+<!-- Sec 9 -->
+
+<div class="sec-9">
+    <div class="container">
+        <h1>Frequently asked questions</h1>
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="accordion" id="accordionFaq">
+                    @for (faq of displayedFaqs; track $index) {
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-{{faq.id}}">
+                          <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            [attr.data-bs-target]="'#collapse-' + faq.id"
+                            aria-expanded="false"
+                            [attr.aria-controls]="'collapse-' + faq.id">
+                            {{ faq.question }}
+                          </button>
+                        </h2>
+                        <div id="collapse-{{faq.id}}" class="accordion-collapse collapse"
+                          [attr.aria-labelledby]="'heading-' + faq.id"
+                          data-bs-parent="#accordionFaq">
+                          <div class="accordion-body">
+                            {{ faq.answer }}
+                          </div>
+                        </div>
+                      </div>
+                    }
+
+
+                    <button class="btn btn-link toggle-btn" (click)="toggleShowAll()">
+                        {{ showAll ? "Show less" : "Show all " + faqs.length + " frequently asked questions" }}
+                      </button>
+
+
+                  </div>
+
+
+                  
+
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fa-regular fa-circle-question"></i>
+                          <h5 class="card-title">More Questions</h5>
+                          <a href="#">Visit the learner help center</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

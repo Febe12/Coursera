@@ -1,0 +1,62 @@
+<dialog id="EnrollDialog">
+   
+
+        <div class="closeDialog d-flex justify-content-end pe-3 mt-4" >
+            
+            <button onclick="document.getElementById('EnrollDialog')?.close()" class="border-0 bg-light">
+                <i class="fa-solid fa-x"></i>
+              </button>
+        </div>
+<div class="EnrollDialogContainer  mx-auto " style="width: 80%;" >
+<span class="mb-5 fs-2  " style="color: #363b42;">7-day Free Trial</span>
+
+    <div class="container-fluid ">
+        <div class="row ">
+         
+            <div class="col-1 my-2"><i class="fa-solid fa-check text-primary fs-4"></i></div>
+            <div class="col-11 my-2 lh-lg">
+
+                <h5>
+                    Unlimited access to all courses in the Certificate</h5>
+                    <p>Watch lectures, try assignments, participate in discussion forums, and more.</p>
+            </div>
+            <div class="col-1 my-2"><i class="fa-solid fa-check text-primary fs-4"></i></div>
+            <div class="col-11 my-2 lh-lg">
+
+                <h5>
+                    Cancel anytime.</h5>
+                    <p>No penalties - simply cancel before the trial ends if it's not right for you.</p>
+            </div>
+            <div class="col-1 my-2"><i class="fa-solid fa-check text-primary fs-4"></i></div>
+            <div class="col-11 my-2 lh-lg">
+
+                <h5>
+                    
+$39 USD per month to continue learning after your trial ends</h5>
+                    <p>Go as fast as you can - the faster you go, the more you save.</p>
+            </div>
+            <div class="col-1 my-2"><i class="fa-solid fa-check text-primary fs-4"></i></div>
+            <div class="col-11 my-2 lh-lg">
+
+                <h5>
+                   
+Certificate when you complete after your trial ends</h5>
+                    <p>Share on your resume, LinkedIn, and CV.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--  -->
+
+    <div>
+
+        <!-- ask eng: asmaa here why when i send the course id from the ts to the html in the router link i did not need to make binding with {{}} -->
+        <button class="btn btn-primary px-3 py-3 mt-3 fs-5 fw-semibold"   [routerLink]="['/Payment',CourseId]"> Get Free Trial</button>
+    </div>
+</div>
+    
+
+</dialog>

@@ -1,0 +1,47 @@
+<dialog id="confirmEmail" class="col-md-6">
+    <div class="dialog-content p-4">
+      <div class="d-flex justify-content-end">
+        <button onclick="document.getElementById('confirmEmail')?.close()" class="border-0 bg-light">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+      <h3 class="text-center mb-3">Confirm the Email</h3>
+  
+      <!-- Show Error -->
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+  
+      <form (ngSubmit)="onSubmit()" #confirmForm="ngForm">
+        <label for="EmailEntered">Email <span class="text-danger">*</span></label>
+        <input
+          class="form-control my-2 py-2"
+          type="email"
+          name="EmailEntered"
+          placeholder="enter your Email Again"
+          required
+          [(ngModel)]="email"
+          #Email="ngModel"
+          [ngClass]="{'is-invalid': Email.touched && Email.invalid}"
+        />
+        <label for="ConfirmCode">Code <span class="text-danger">*</span></label>
+        <input
+          class="form-control my-2 py-2"
+          type="text"
+          name="ConfirmCode"
+          placeholder="enter the code"
+          required
+          [(ngModel)]="code"
+          #Code="ngModel"
+          [ngClass]="{'is-invalid': Code.touched && Code.invalid}"
+        />
+        <button
+          class="btn btn-primary w-100 mt-3 py-3 fw-semibold fs-5"
+          type="submit"
+          [disabled]="!confirmForm.form.valid"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </dialog>

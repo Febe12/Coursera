@@ -1,0 +1,74 @@
+$blackColor: black;
+$lightGray: #8495b0;
+$blueColor: blue;
+$baseGray: #5b6780;
+$whiteColor: white;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.CourseParent {
+  min-height: 100%;
+  border-color: #8495b0 !important;
+
+  .CourseContent {
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #5b6780;
+    }
+
+    .LikeContainer {
+      span:nth-child(1) {
+        font-weight: 700;
+        font-size: 0.875rem;
+        margin-right: 4px;
+      }
+
+      span:nth-child(2) {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: #5b6780;
+      }
+    }
+  }
+
+  &:hover {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.04);
+    box-shadow: 0 0 12px $lightGray;
+    cursor: pointer;
+  }
+  @media (max-width: 750px) {
+    flex-direction: row-reverse !important;
+
+    .imageContainer {
+      width: 30%;
+      padding: 10px;
+
+      img {
+        border-radius: 12px;
+        height: 100%;
+        width: 100%;
+        // object-fit: contain;
+        // object-fit: cover;
+        object-fit: scale-down;
+        // object-fit: fill;
+        // object-fit: none;
+      }
+    }
+
+    .CourseContent {
+      width: 70%;
+    }
+  }
+}

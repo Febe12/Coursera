@@ -1,0 +1,147 @@
+{
+"Home": {
+  "RecentlyViewedCoursess": "الدورات التي تم عرضها مؤخرًا",
+    "button": "عرض 4 دورات أخرى",
+      "button2": "عرض أقل",
+  "MostPopularCertificates": "الشهادات الأكثر شيوعًا",
+  "PersonalizedSpecializationsForYou": "تخصصات مخصصة لك",
+  "BuildInDemandBusinessAnalysisSkills": "طوّر مهارات تحليل الأعمال المطلوبة",
+  "ExploreWithACourseraPlusSubscription": "استكشف باستخدام اشتراك Coursera Plus",
+   "PopularinDataScience": "الأكثر شيوعًا في علم البيانات",
+  "PersonalizedSpecializationsforYou": "تخصصات مُخصصة لك",
+  "BuildLearningSkills": "اكتسب مهارات تعلُّم الآلة المطلوبة في سوق العمل",
+  "ExploreSubscription": "استكشف مع اشتراك Coursera Plus",
+  "BasedViews": "استنادًا إلى مشاهداتك الأخيرة",
+  "Categories": "الفئات",
+  "Course": "الدورات",
+  "ArtsAndHumanities": "الفنون والعلوم الإنسانية",
+"Business": "الأعمال",
+"ComputerScience": "علوم الحاسوب",
+"DataScience": "علوم البيانات",
+"InformationTechnology": "تكنولوجيا المعلومات",
+"Health": "الصحة",
+"MathAndLogic": "الرياضيات والمنطق",
+"PersonalDevelopment": "التطوير الشخصي",
+"PhysicalScienceAndEngineering": "العلوم الفيزيائية والهندسة",
+"SocialScience": "العلوم الاجتماعية"
+
+},
+
+"HomeDetails": {
+  "InstructorName": "المدربون",
+  "Includedwith": "مشمول مع ",
+  "Learnmore": "اعرف المزيد",
+  "Enroll": "سجّل مجانًا",
+   "TryforFree": "جرّب مجانًا: سجّل لبدء فترة تجريبية مجانية لمدة 7 أيام",
+  "Financialavailable": "المساعدة المالية متوفرة",
+  "alreadyenrolled": "مسجل مسبقًا",
+  "FirstItem": "اشرح المفاهيم الأساسية والإمكانات والنماذج والأدوات والتطبيقات والمنصات لنماذج الذكاء الاصطناعي التوليدي.",
+  "SecondItem": "طبّق تقنيات هندسة المطالبات (prompt engineering) القوية لكتابة مطالبات فعّالة وتحقيق نتائج مرغوبة من نماذج الذكاء الاصطناعي.",
+  "ThirdItem": "ناقش قيود الذكاء الاصطناعي التوليدي واشرح الاعتبارات والمخاوف الأخلاقية لاستخدامه بشكل مسؤول.",
+  "FourthItem": "تعرف على قدرة الذكاء الاصطناعي التوليدي في تعزيز مسيرتك المهنية والمساعدة في تحسينات مكان عملك.",
+  "Skillsyoullgain": "المهارات التي ستكتسبها",
+  "Detailstoknow": "تفاصيل يجب معرفتها",
+  "DetailstoknowFirstCardTitile": "شهادة قابلة للمشاركة",
+  "DetailstoknowFirstCardSubTitle": "أضفها إلى ملفك الشخصي على لينكدإن",
+  "DetailstoknowSecondCardTitile": "يُدرّس باللغة الإنجليزية",
+  "DetailstoknowSecondCardSubTitle": "متاح بـ 24 لغة",
+  "howemployees": "اطلع على كيفية إتقان الموظفين في أفضل الشركات للمهارات المطلوبة",
+  "learnmoreAboutBusiness": "اعرف المزيد عن Coursera للأعمال",
+  "Advanced": "طوّر خبرتك المتخصصة",
+  "expert": "تعلم المهارات المطلوبة من خبراء الجامعات والصناعة",
+  "master": "أتقن موضوعًا أو أداة من خلال مشاريع عملية",
+  "develop": "طوّر فهمًا عميقًا للمفاهيم الأساسية",
+  "earn": "احصل على شهادة مهنية من IBM",
+  "whyPeople": "لماذا يختار الناس Coursera لمسيرتهم المهنية"
+}
+
+,
+"FirstCard": {
+  "Title": "ابدأ مع الذكاء الاصطناعي التوليدي",
+  "SubTitle": "استكشاف",
+  "Button": "عرض جميع دورات GenAI",
+  "CardTitle": "أساسيات الذكاء الاصطناعي التوليدي",
+  "Specialization": "تخصص",
+  "button1": "مبتدئ",
+  "button2": "شائع",
+  "button3": "جديد",
+  "button4": "أدوات"
+},
+"SecondCard": {
+  "Title": "جامعة لندن",
+  "subject": "هل أنت مستعد لتطوير مسيرتك المهنية في الأمن السيبراني؟ اكتسب خبرة عملية من خلال جلسات مختبرية تحاكي السيناريوهات الواقعية.",
+  "Button": "معرفة المزيد"
+},
+"CardThree": {
+  "Title": "مدرب كورسيرا",
+  "subject": "أتقن مهارات جديدة بمساعدة مدعومة بالذكاء الاصطناعي، واحصل على دعم تفاعلي حسب الطلب يتماشى مع أهدافك الفريدة.",
+  "Button": "معرفة المزيد"
+}
+,
+
+  "Navbar1": {
+    "coursera": "كورسيرا",
+    "Explore": "استكشف",
+    "Language": "العربية",
+    "searchBar": "ماذا تريد أن تتعلم؟",
+       "english": "الانجليزية",
+      "arabic": "العربية"
+  },
+  "Navbar2": {
+    "home": "الرئيسية",
+    "myLearning": "تعلّمي",
+    "onlineDegrees": "الدرجات عبر الإنترنت",
+    "career": "الوظائف"
+  },
+  "Footer": {
+    "courseeraSection": {
+      "title": "كورسيرا",
+      "about": "عن كورسيرا",
+      "whatWeOffer": "ما نقدمه",
+      "leadership": "القيادة",
+      "careers": "الوظائف",
+      "catalog": "الفهرس",
+      "courseraPlus": "كورسيرا بلس",
+      "professionalCertificates": "شهادات مهنية",
+      "masterTrackCertificates": "شهادات MasterTrack®",
+      "degrees": "الدرجات العلمية",
+      "forEnterprise": "للشركات",
+      "forGovernment": "للحكومة",
+      "forCampus": "للمؤسسات التعليمية",
+      "becomeAPartner": "كن شريكًا",
+      "socialImpact": "المؤثر المجتمعي"
+    },
+    "communitySection": {
+      "title": "المجتمع",
+      "learners": "المتعلمين",
+      "partners": "الشركاء",
+      "betaTesters": "اختبار المستخدمين",
+      "blog": "المدونة",
+      "theCourseraPodcast": "بودكاست كورسيرا",
+      "techBlog": "مدونة التقنية",
+      "teachingCenter": "مركز التدريس"
+    },
+    "moreSection": {
+      "title": "المزيد",
+      "press": "الأخبار",
+      "investors": "المستثمرين",
+      "terms": "الشروط",
+      "privacy": "الخصوصية",
+      "help": "المساعدة",
+      "accessibility": "إمكانية الوصول",
+      "contact": "اتصل بنا",
+      "articles": "مقالات",
+      "directory": "الدليل",
+      "affiliates": "التابعين",
+      "modernSlaveryStatement": "بيان الرقابة الحديثة",
+      "manageCookiePreferences": "إدارة إعدادات الكوكيز"
+    },
+    "mobileAppSection": {
+      "title": "تطبيق الجوال",
+      "appStoreButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "googlePlayButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "certifiedBadge": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+   },
+    "copyright": "© 2020 شركة كورسيرا. جميع الحقوق محفوظة."
+  }
+}

@@ -1,0 +1,79 @@
+.certificate-card {
+    border: 2px solid #dbe1e9;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px 5px rgba(122, 122, 122, 0.2);
+    }
+  }
+  
+  .certificate-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+  
+  .badge-container{
+    position: absolute;
+    top: 15px;
+    right:15px;
+    background-color: #ffffff;
+    border: #bfc8d6 2px solid;
+    border-radius: 5px;
+    color: #0f1114;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .badge{
+    color: #0f1114;
+    padding: 5px 10px;
+  
+  }
+  .logo-container{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .logo-image{
+      border: #bfc8d6 1px solid;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      padding: 2px;
+    }
+    .logo{
+      color: #6c768d;
+    }
+  }
+  .title{
+    color: #0f1114;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .description-container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    p{
+      margin: 0;
+    }
+    .link{
+      color: #3e7fdd;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+     p{
+      font-size: 0.8rem;
+     }
+    }
+    .description{
+      color: #6c768d;
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,0 +1,289 @@
+*{
+  box-sizing: border-box;
+}
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+
+}
+.paddingCard{
+  padding: 48px;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+.marginTop {
+  margin-top: 50px;
+}
+.marginTopFirst{
+  margin-top: 50px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.logo-card {
+  border: 1px solid #ddd;
+  width: 24px;
+  height: 24px;
+}
+
+.card-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #5b6780;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.last-section {
+  font-size: 14px;
+  color: #666;
+}
+
+.CardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.btnStart {
+  border: 1px gray solid;
+  box-shadow: none !important;
+  border-radius: 20px;
+}
+
+.StartCard {
+  height: 500px;
+  margin-top: 50px;
+  background-color: #f2f5fa;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+.CardBody {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.StartBTN {
+  padding-bottom: 30px;
+}
+
+.CardImageStar {
+  width: 95%;
+  height: 140px;
+  object-fit: cover;
+  margin: auto;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+.StartText {
+  padding-top: 100px;
+}
+
+.CustomCardContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+}
+
+.CardText {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.showBtn{
+  margin-top: 30px;
+  border: 0;
+  color: #0056d2;
+  background-color: #ffffff;
+  max-width: 320px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #0056d2;
+  padding: 8px 16px;
+}
+
+.CustomButton {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.CustomButton:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.CustomCard {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  background-color: #fff;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.CustomCard:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.UniversityImg {
+  width: 170px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.FoterCoursera {
+  color: black;
+  text-decoration: none;
+}
+
+.FoterCoursera:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.Categories {
+  height: 70px;
+  margin-bottom: 10px;
+  background-color: #002761;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.CategoriesCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.leftSide {
+  margin: auto;
+}
+
+.rightSide {
+  margin-left: 40px;
+}
+
+.CategoriesMouse {
+  background-color: #0056d2;
+}
+
+.CategoriesLink a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width:1020px) {
+  .custom-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .custom-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  }
+
+  .card-image {
+    width: 40%;
+    height: 150px;
+  }
+
+  .card-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-link:hover {
+    color: #0056b3;
+  }
+
+  .CardImageStar {
+    width: 30%;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rightSide {
+    margin: 0;
+    padding: 0;
+  }
+
+  .leftSide {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Categories {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .custom-card {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .card-image {
+    width: 50%;
+    height: 150px;
+  }
+
+  .CardBody {
+    flex-grow: 1;
+    padding: 10px;
+    text-align: left;
+  }
+}

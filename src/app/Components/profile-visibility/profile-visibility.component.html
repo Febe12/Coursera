@@ -1,0 +1,28 @@
+<dialog id="profileVisibility">
+    <div class="ProjectDialogContainer" style="width: 80%; margin: auto;">
+        <div class="d-flex justify-content-end mt-4">
+            <button onclick="document.getElementById('profileVisibility')?.close()" class="border-0 bg-light">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <h2 style="font-size: 1.875rem;" class="my-4">Profile visibility and privacy settings</h2>
+        <p style="font-size: 1rem; font-weight: 400; margin-bottom: 2rem;">
+            Sharing your profile is a great way to stand out by showcasing your skills and accomplishments on Coursera.
+        </p>
+        <div class="mb-4">
+            <h6 style="font-weight: 600; font-size: 1.25rem;">Who do you want to see your profile?</h6>
+            <div class="form-check ms-4 mt-2">
+                <input type="checkbox" class="form-check-input mt-0" id="visibilityOption" checked>
+                <label class="form-check-label" for="visibilityOption mt-3">
+                    <strong>Anyone with my link</strong>
+                    <span style="font-size: 0.9rem; color: #6c757d;">Anyone who has the link to your profile can view it (but it won’t appear as a result on search engines).</span>
+                </label>
+            </div>
+        </div>
+        <div class="py-3 pe-4 ">
+            <button class="btn btn-primary px-4 py-2 fw-semibold fs-6" onclick="document.getElementById('profileVisibility')?.close()">
+                Done
+            </button>
+        </div>
+    </div>
+</dialog>

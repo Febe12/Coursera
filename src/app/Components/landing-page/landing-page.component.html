@@ -1,0 +1,236 @@
+
+<!-- learn -->
+<app-out-navbar></app-out-navbar>
+ <div class="container-fluid">
+  <div class="row marginLearn">
+    <div class="col-12 col-md-7 ">
+      <h1 class="learn">Learn without limits</h1>
+      <p class="magrinDescription">Start, switch, or advance your career with more than 10,000 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
+    </div>
+    <div class="col-md-5 learnImage">
+      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5CFC8u8XiXcbSOlVv6JZQx/4e6f898f57f9d798437b3aa22026e30b/CourseraLearners_C_Composition_Hillary_copy__3_.png?auto=format%2Ccompress&dpr=1&w=459&h=497&q=40" alt="">
+    </div>
+    <div class="buttonGroup">
+      <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('registerDialog')?.showModal()">Join For Free</button>
+      <!-- <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('confirmEmail')?.showModal()">confirm email</button>
+
+      <button type="button" class="btn btn-primary buttonFree" (click)="gotohome()">home </button> -->
+
+      <!-- <button type="button" class="btn btn-outline-primary buttonTry">Try Coursera for Business </button> -->
+    </div>
+  </div>
+</div>
+
+<!-- logo -->
+
+<div class="container-fluid logo">
+  <div class="row paddingTop">
+    <div class="center">
+      <h2>
+        <a class="universities">We collaborate with
+          <span class="leading">350+ leading universities and companies</span>
+        </a>
+      </h2>
+    </div>
+    <div class="marginLogo">
+      <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/77hmeEJo3ZPlURCU02fD52/aa37b7f7b52285ba350acac62d8af5c1/illinois-3.png?auto=format%2Ccompress&dpr=2&h=32" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6XkOucZz6pMLV5DPvXCgCL/1777129a58b0a62b237bd28e9956afe8/duke-3.png?auto=format%2Ccompress&dpr=2&h=32" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1c6RjBHi3Lqb9QpWxje7iA/b529f909c5230af3210ba2d47d149620/google.png?auto=format%2Ccompress&dpr=2&h=37" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/60SA8pGxPXMmJf4n7umK1H/ccec31bbe2358210bf8391dcba6cd2f1/umich.png?auto=format%2Ccompress&dpr=2&h=55" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3toC4I7jbWxiedfxiyNjtT/735faeaf976a9692f425f8c3a7d125dc/1000px-IBM_logo.svg.png?auto=format%2Ccompress&dpr=2&h=37" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/FHOd44z40jTFsSSao84AM/d1e357f5650a23bf2936114112d44445/imperial.png?auto=format%2Ccompress&dpr=2&h=35" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4FSFmNXuDIzTvFb7n0v4mK/704ae9e0a7981fb6415f4cb4609bbbb3/stanford.svg?auto=format%2Ccompress&dpr=2&h=27" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1ZeiauXe5bPProvfuIo7o2/55d005d42979ab585cdfa01f825b7d4f/penn.svg?auto=format%2Ccompress&dpr=2&h=37" alt="" class="logoImage" >
+        </a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Most Popular Certificates -->
+<div class="container-fluid">
+  <div class="row paddingMost">
+    <div class="Specializations">Specializations and Professional Certificates</div>
+    <h2 class="mostPopular">Most Popular Certificates</h2>
+    <p class="Specializations">Explore our most popular programs, get job-ready for an in-demand career.</p>
+
+    @for(prod of filterArray.slice(0, visibleCount2) ; track prod.id){
+      <div class="col-12 col-sm-6 col-lg-3  mt-5">
+        <div class="custom-card">
+          <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+          <div class="CardBody">
+            <div class="card-header">
+              <img class="logo-card" [src]="prod.logoImage" alt="">
+              <a class="card-link" href="#">{{prod.organization}}</a>
+            </div>
+            <h6 class="card-text">{{prod.name}}</h6>
+            <p class="last-section">Course</p>
+          </div>
+        </div>
+      </div>
+      }
+
+    </div>
+    @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard2()">Show 8 more</button>
+      } @else {
+      <button class="showBtn" (click)="showfewerCard2()">Show fewer</button>
+      }
+
+</div>
+
+<!-- New on Coursera -->
+<div class="container-fluid">
+  <div class="row paddingMost">
+    <div class="Specializations">Courses and Professional Certificates</div>
+    <h2 class="mostPopular">New on Coursera</h2>
+    <p class="Specializations">Explore our newest programs, focused on delivering in-demand skills.</p>
+
+    @for(prod of filterArray.slice(0, visibleCount) ; track prod.id){
+      <div class="col-12 col-sm-6 col-lg-3  mt-5">
+        <div class="custom-card">
+          <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+          <div class="CardBody">
+            <div class="card-header">
+              <img class="logo-card" [src]="prod.logoImage" alt="">
+              <a class="card-link" href="#">{{prod.organization}}</a>
+            </div>
+            <h6 class="card-text">{{prod.name}}</h6>
+            <p class="last-section">Course</p>
+          </div>
+        </div>
+      </div>
+      }
+
+    </div>
+    @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard()">Show 8 more</button>
+      } @else {
+      <button class="showBtn" (click)="showfewerCard()">Show fewer</button>
+      }
+
+</div>
+
+<!-- Get a head start on a degree today -->
+<div class="container-fluid">
+  <div class="row paddingMost">
+    <div class="Specializations">Degree Programs</div>
+    <h2 class="mostPopular">Get a head start on a degree today</h2>
+    <p class="Specializations">With these programs, you can build valuable skills, earn career credentials, and make progress
+       toward a degree before you even enroll.</p>
+
+    @for(prod of filterArray.slice(0, visibleCount3) ; track prod.id){
+      <div class="col-12 col-sm-6 col-lg-3  mt-5">
+        <div class="custom-card">
+          <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+          <div class="CardBody">
+            <div class="card-header">
+              <img class="logo-card" [src]="prod.logoImage" alt="">
+              <a class="card-link" href="#">{{prod.organization}}</a>
+            </div>
+            <h6 class="card-text">{{prod.name}}</h6>
+            <p class="last-section">Course</p>
+          </div>
+        </div>
+      </div>
+      }
+
+    </div>
+    @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard3()">Show 8 more</button>
+      } @else {
+      <button class="showBtn" (click)="showfewerCard3()">Show fewer</button>
+      }
+
+</div>
+
+<!-- Explore Coursera -->
+<div class="container-fluid">
+
+  <div class="row paddingMost">
+
+    <h2 class="mostPopular exploreText">Explore Coursera</h2>
+
+    @for(explore of filterCategory; track explore.categoryID){
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden">
+          <img class="exploreImage no-left-radius" src="{{explore.categoryImage}}" alt="Data Science">
+
+          <div class="p-3">
+            <div class="fw-bold">{{explore.categoryName}}</div>
+            <span class="text-muted">{{explore.courses.length}} courses</span>
+          </div>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row marginCommunity">
+
+    <div class="center">
+      <h2 class="communityFrom"> From the Coursera community</h2>
+    <p class="communityText">168+ million people have already joined Coursera</p>
+    </div>
+
+
+
+        <div class="col-md-4 communityCard">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/N4qrT1XIveNL5SMHSkjTH/b57854e9246bd3aa9fe9ebc51ce650d1/Circle_Kenia.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" alt="">
+          <h3 class="communityName communityPadding">Kenia R.</h3>
+          <div class="communityPadding">United States</div>
+          <div class="line"></div>
+          <div class="communityDescription">“Being a mother — especially a working mother means I’m constantly trying to juggle my schedule, my kids’ schedules, and work. I am very grateful for the flexible and remote learning programs that Coursera has to offer.”</div>
+        </div>
+
+        <div class="col-md-4 communityCard">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/66DwUMt1tQTmR4q1JaHPdV/71cbdd4415999eecfcd899283086260c/Circle_Ryan.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" alt="">
+          <h3 class="communityName communityPadding">Ryan L.</h3>
+          <div class="communityPadding">United States</div>
+          <div class="line"></div>
+          <div class="communityDescription">“From taking courses on Coursera, I gained a deep understanding of the UX Design process from start to finish. With the knowledge I gained, I feel prepared for entry-level jobs and internships. I've been able to apply the skills and knowledge I gained to multiple projects and work experiences.”</div>
+        </div>
+
+        <div class="col-md-4 communityCard">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/28Nv1NZrGQsLf4kt8CXMdd/66d2002ee1d804a0a1a9729376648060/Vishal_Verma.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" alt="">
+          <h3 class="communityName communityPadding">Vishal V.</h3>
+          <div class="communityPadding">India</div>
+          <div class="line"></div>
+          <div class="communityDescription">“I really enjoyed my courses. The quizzes, videos, and quick labs provided helpful hands-on experience. Learning on Coursera has given me the confidence and ability to excel in my career. I love this feeling.”</div>
+        </div>
+
+
+  </div>
+
+</div>
+
+<app-login-register-form-dialog *ngIf="!authService.getToken()"></app-login-register-form-dialog>
+
+<app-footer></app-footer>
+<!--
+<app-confirm-email *ngIf="!authService.getToken()"></app-confirm-email> -->
+
+

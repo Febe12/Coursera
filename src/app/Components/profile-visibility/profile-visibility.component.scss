@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+dialog {
+    height: 70vh;
+    margin-top: 1%;
+    border-radius: 10px;
+    border: none;
+    width: 700px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ProjectDialogContainer {
+    padding: 20px;
+}
+
+.d-flex.justify-content-end {
+    align-items: center;
+}
+
+.fa-solid.fa-x {
+    color: #6c757d;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.875rem;
+    margin: 2rem 0;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-check-input {
+    accent-color: #0d6efd; /* Primary color for checkbox */
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.form-check-label {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: 600;
+    color: #0d6efd; /* Blue color for emphasis */
+}
+
+span {
+    font-size: 0.9rem;
+    color: #6c757d; /* Gray color for secondary text */
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto; /* Center the button horizontally */
+}

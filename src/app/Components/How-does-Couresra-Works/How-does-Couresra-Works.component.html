@@ -1,0 +1,125 @@
+
+
+<div class="px-4 mt-3 WhatWeOfferContent">
+   <!-- navbar -->
+    <div  class="d-flex justify-content-between  ">
+        <div class="courseraLogo fw-bold fs-3 text-primary"> Coursera</div>
+      
+        <div class="buttons">
+          <button class="btn btn-outline-dark px-2 py-2  fw-bold  me-3" routerLink="/about">About</button>
+          <button class="btn btn-primary px-2 py-2  fw-bold " routerLink="/WhatWeOffer">what we offer</button>
+        </div>
+      
+      
+      </div>
+<!-- header -->
+      <div class="HeaderOfPage mt-5 text-center p-4 mb-3" >
+
+        <p >World-Class Learning for Anyone, Anywhere</p>
+
+        <p >Coursera partners with more than 350+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.</p>
+      </div>
+
+      <!-- what we offer  -->
+
+      <div class="container-fluid GainsEarnedContainer">
+        <div class="row">
+          @for(whatWweOffer of WhatWeOffer; track whatWweOffer.id) {
+
+            <div class="col-12 col-md-6 text-center px-4 mb-5">
+                <div class="GainsEarned">
+                    <img src="{{whatWweOffer.img}}" alt="" class="w-25 img-fluid" />
+                    <p class="fw-bold ValuesEarnedTitle">{{whatWweOffer.title}}</p>
+              
+            <div class="GainsEarnedContent">
+                <p class="mb-4 mt-3">{{whatWweOffer.description1}} </p>
+                <p>{{whatWweOffer.description2}}</p>
+            </div>
+            </div>
+
+
+            </div>
+           
+          }
+            
+        </div>
+      </div>
+
+
+
+      <!-- Achieve  part -->
+
+      <!-- <div class="container-fluid my-5">
+
+        <div class="AchieveHeader">
+            <h1 style="    margin-bottom: 16px;        font-size: 2.25rem;
+        line-height: 3rem;letter-spacing: -0.1px;text-align: center;">Achieve your goals on Coursera</h1>
+        </div>
+        <div class="AchieveContent">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        
+                        <div  class="header" style="    display: flex
+                        ;
+                            justify-content: center;
+                            align-items: center;
+                            min-height: 200px;
+                            background-color: #382d8b;
+                            color: #fff;
+                            padding: 0 48px;">
+                            <h1 style="font-size: 1.75rem;
+                     
+                            line-height: 2.25rem;
+                            letter-spacing: -0.1px;text-align: center;">Earn a university-issued certificate and credit towards a degree</h1>
+                        </div>
+
+                  
+
+                        <div class="contentParent" style="    padding: 32px;
+    background-color: #fafafa;">
+
+       <div class="my-2">
+        <h3 style="  
+        font-size: 1rem;
+  
+        line-height: 1.5rem;
+        letter-spacing: -0.1px">
+        Choose</h3>
+
+        <h1 style="        font-size: 2.25rem;
+      line-height: 3rem;">
+      MasterTrack® Certificates</h1>
+       </div>
+
+       <div class="my-2">
+        <h3 style="  
+            font-size: 1rem;
+   
+    line-height: 1.5rem;
+    letter-spacing: -0.1px;">
+        Average time commitment</h3>
+
+        <h1 style="        font-size: 2.25rem;
+      line-height: 3rem;">
+      MasterTrack® Certificates</h1>
+       </div>
+        
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">1</div>
+                </div>
+            </div>
+        </div>
+      </div> -->
+
+
+
+</div>
+
+<app-footer></app-footer>
+
+
+
+

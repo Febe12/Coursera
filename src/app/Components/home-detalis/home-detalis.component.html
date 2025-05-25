@@ -1,0 +1,285 @@
+<app-navbar></app-navbar>
+<div class="navSection paddingPage">
+  <div class="mb-3">
+    <div class="row g-0">
+
+      <div class="col-12 col-lg-7 ">
+
+        <div class="card-body">
+
+          <img class="mb-3 mt-5"
+            [src]="CareerCourse?.logoImage"
+            alt="">
+
+          <h1 class="card-title mb-3">{{CareerCourse?.name}}</h1>
+          <p class="card-text mb-3">
+           {{CareerCourse?.description}}
+          </p>
+          <div style="display: flex; align-items: center; gap: 10px;" class="Instructors">
+            <img class="imageInstructor" src="{{getInstructor?.instructorImage}}" alt="">
+            <p style="margin: 0;">{{'HomeDetails.InstructorName' | translate}}</p>
+            <a class="linkInstructor" (click)="instructorDitals(CareerCourse?.instructor)">
+              <span>{{ getInstructor?.Name }}</span>
+            </a>
+          </div>
+
+
+          <div class="row">
+            <div class="col-12 col-lg-4">
+
+              <button class="btn btn-primary NavButton " onclick="document.getElementById('EnrollDialog')?.showModal()">
+              {{'HomeDetails.Enroll' | translate}}
+                <!-- <p class="textBTN">Starts Mar 2</p> -->
+              </button>
+
+              <!-- <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span> -->
+            </div>
+            <div class="col-12 col-lg-8 mb-3 trytToFreeText px-3">
+              <p>{{'HomeDetails.TryforFree' | translate}}</p>
+              <a href="" class="link">{{'HomeDetails.Financialavailable' | translate}}</a>
+            </div>
+
+
+          </div>
+
+          <div class="pt-3  ">
+            <span class="salary">{{CareerCourse?.views}}</span>  {{'HomeDetails.alreadyenrolled' | translate}}
+          </div>
+          <div class="pt-3 mb-5">
+            {{'HomeDetails.Includedwith' | translate}}
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/landing_page/coursera-plus-blue.png?auto=format%2Ccompress&dpr=1&h=10"
+              alt="">
+            <a href="" class="link">
+               {{'HomeDetails.Learnmore' | translate}}</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-5 NavImage">
+        <img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/69d8d47404e3da1d706b895876d3b49e.png?auto=format%2Ccompress&dpr=1&q=80"
+          class="img-fluid " alt="...">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row mx-auto paddingPage">
+
+  <div class="col-10 py-1">
+    <div class="row">
+
+       @for(prod of CareerCourse?.WhatYouWillLearn; track CareerCourse?.id){
+<div class="col-5 marginlearnAll">
+      <div class="col-1">
+        <i class="fa-solid fa-check "></i>
+      </div>
+      <div class="col-11 marginLearn">
+        <span class="marginLearnText">{{prod}}</span>
+      </div>
+      </div>
+
+    }
+
+
+    </div>
+  </div>
+
+
+</div>
+
+<!-- skill -->
+<div class="paddingPage ">
+  <h2 class="mb-3">
+  {{'HomeDetails.Skillsyoullgain' | translate}}
+  </h2>
+  <div class="row">
+    <div class="col-8">
+      <ul class="allSkils">
+         @for(prod of CareerCourse?.Skills; track CareerCourse?.id){
+          <li class="skillsLI"> {{prod}}</li>
+         }
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="row DetailsTO">
+  <h3 class="mb-4">  {{'HomeDetails.Detailstoknow' | translate}}</h3>
+
+  <div class="col-3">
+    <img class="mb-1"
+      src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/31ebcba3851b87d1d8609abf15d0ff7e.png?auto=format%2Ccompress&dpr=1&w=24&h=24"
+      alt="">
+    <div>{{'HomeDetails.DetailstoknowFirstCardTitile' | translate}}</div>
+    <p class="linkedIn">{{'HomeDetails.DetailstoknowFirstCardSubTitle' | translate}}</p>
+  </div>
+
+  <div class="col-3">
+    <i class="fa-solid fa-language"></i>
+    <div>{{'HomeDetails.DetailstoknowSecondCardTitile' | translate}}</div>
+    <a class="languagesLink">{{'HomeDetails.DetailstoknowSecondCardSubTitle' | translate}}</a>
+  </div>
+</div>
+
+<!-- employees -->
+<div class="employees mb-5 ">
+  <div class="mb-3">
+    <div class="row g-0">
+
+      <div class="col-12 col-lg-8">
+
+        <div class="card-body ms-5 mt-3">
+          <h1>{{'HomeDetails.howemployees' | translate}}</h1>
+          <a href="" class="languagesLink">{{'HomeDetails.learnmoreAboutBusiness' | translate}}</a>
+
+
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-lg-4 mt-5">
+        <img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/74c8747e8210831049cf88dd4eefe26c.png?auto=format%2Ccompress&dpr=1&w=320&h=70&q=40"
+          class="img-fluid " alt="...">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="ms-4 paddingPage">
+  <div class="row">
+
+    <div class="col-12 col-lg-6">
+      <h2  class="mb-4">{{CareerCourse?.outComes?.outComesTitle}}</h2>
+      <ul>
+              @for(prod of CareerCourse?.outComes?.outComesDescription; track CareerCourse?.id){
+                 <li  class="mb-2">
+{{prod}}
+
+        </li>
+
+    }
+
+
+      </ul>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <img class="borderIMG img-fluid"
+        [src]="CareerCourse?.outcomesImage"alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- dialoge -->
+
+<!-- <h2 mat-dialog-title>Dialog Title</h2>
+<div mat-dialog-content>
+  <p>This is a simple Angular Material Dialog!</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div> -->
+
+<div class="row ms-4 paddingPage">
+  <h2 class="mb-4 mt-5">{{'HomeDetails.whyPeople' | translate}}</h2>
+
+<!-- 1 -->
+  <!-- <div class="CardWidth">
+    <div class="people">
+      <div class="row ms-2 mt-2">
+        <div class="col-4">
+          <img class="rounded-circle img-fluid"
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_testimonials/passionate_learner/Felipe_Moitta.png?auto=format%2Ccompress&dpr=1&w=64&h=64&fit=crop"
+            alt="">
+        </div>
+        <div class="col-8">
+          <p>Felipe M.</p>
+          <p class="linkedIn">Learner since 2018</p>
+        </div>
+
+
+      </div>
+      <p class="ms-3 linkedIn">"To be able to take courses at my own pace and rhythm has been an amazing experience. I can learn
+        whenever it fits my schedule and mood."</p>
+    </div>
+  </div> -->
+<!-- 2 -->
+<!-- <div class="CardWidth">
+  <div class="people">
+    <div class="row ms-2 mt-2">
+      <div class="col-4">
+        <img class="rounded-circle img-fluid"
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_testimonials/passionate_learner/Jennifer_John.png?auto=format%2Ccompress&dpr=1&w=64&h=64&fit=crop"
+          alt="">
+      </div>
+      <div class="col-8">
+        <p>Jennifer J.</p>
+        <p class="linkedIn">Learner since 2020</p>
+      </div>
+
+
+    </div>
+    <p class="ms-3 linkedIn">"I directly applied the concepts and skills I learned from my courses to an exciting new project at work."</p>
+  </div>
+</div> -->
+ <!-- 3 -->
+ <!-- <div class="CardWidth">
+  <div class="people">
+    <div class="row ms-2 mt-2">
+      <div class="col-4">
+        <img class="rounded-circle img-fluid"
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_testimonials/passionate_learner/Larry_Tao_Wang_1.png?auto=format%2Ccompress&dpr=1&w=64&h=64&fit=crop"
+          alt="">
+      </div>
+      <div class="col-8">
+        <p>Larry W.</p>
+        <p class="linkedIn">Learner since 2021</p>
+      </div>
+
+
+    </div>
+    <p class="ms-3 linkedIn">"When I need courses on topics that my university doesn't offer, Coursera is one of the best places to go."</p>
+  </div>
+</div> -->
+  <!-- 4 -->
+  <!-- <div class="CardWidth">
+    <div class="people">
+      <div class="row ms-2 mt-2">
+        <div class="col-4">
+          <img class="rounded-circle img-fluid"
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_testimonials/passionate_learner/Chaitanya_Anand.png?auto=format%2Ccompress&dpr=1&w=64&h=64&fit=crop"
+            alt="">
+        </div>
+        <div class="col-8">
+          <p>Chaitanya A.</p>
+
+        </div>
+
+
+      </div>
+      <p class="ms-3 linkedIn">"Learning isn't just about being better at your job: it's so much more than that. Coursera allows me to learn without limits."</p>
+    </div>
+  </div> -->
+
+<app-success-stories></app-success-stories>
+</div>
+
+<app-enroll-dialog></app-enroll-dialog>
+
+<app-footer></app-footer>
+<!-- install icon -->

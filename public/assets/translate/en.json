@@ -1,0 +1,167 @@
+{
+  "Home":
+    {
+      "RecentlyViewedCoursess": "Recently Viewed Coursess",
+      "button": "show 4 more ",
+      "button2": "show fewer ",
+      "MostPopularCertificates": "Most Popular Certificates",
+      "PersonalizedSpecializationsForYou": "Personalized Specializations for You",
+      "BuildInDemandBusinessAnalysisSkills": "Build In-Demand Business Analysis Skills",
+      "ExploreWithACourseraPlusSubscription": "Explore with a Coursera Plus Subscription",
+      "PopularinDataScience": "Popular in Data Science",
+      "PersonalizedSpecializationsforYou": "Personalized Specializations for You",
+      "BuildLearningSkills": "Build In-Demand Machine Learning Skills",
+      "ExploreSubscription": "Explore with a Coursera Plus Subscription",
+      "BasedViews": "Based on Your Recent Views",
+      "Categories": "Categories",
+      "Course": "Courses",
+        "ArtsAndHumanities": "Arts and Humanities",
+  "Business": "Business",
+  "ComputerScience": "Computer Science",
+  "DataScience": "Data Science",
+  "InformationTechnology": "Information Technology",
+  "Health": "Health",
+  "MathAndLogic": "Math and Logic",
+  "PersonalDevelopment": "Personal Development",
+  "PhysicalScienceAndEngineering": "Physical Science and Engineering",
+  "SocialScience": "Social Science"
+
+    },
+  "HomeDetails":
+    {
+      "InstructorName": "Instructors",
+      "Includedwith": "Included with ",
+      "Enroll": "  Enroll for Free",
+
+      "TryforFree": "Try for Free: Enroll to start your 7-day full access free trial",
+      "Financialavailable": "Financial aid available",
+      "alreadyenrolled": " already enrolled",
+      "Learnmore": " Learn more ",
+      "FirstItem": "Explain the fundamental concepts, capabilities, models, tools, applications, and platforms of generative AI foundation models.",
+      "SecondItem": "Apply powerful prompt engineering techniques to write effective prompts and generate desired outcomes from AI models.",
+      "ThirdItem": "Discuss the limitations of generative AI and explain the ethical concerns and considerations for the responsible use of generative AI.",
+      "FourthItem": "Recognize the ability of generative AI to enhance your career and help implement improvements at your workplace.",
+      "Skillsyoullgain": "Skills you'll gain",
+    "Detailstoknow":"Details to know",
+    "DetailstoknowFirstCardTitile":"Shareable certificate",
+    "DetailstoknowFirstCardSubTitle":"Add to your LinkedIn profile",
+    "DetailstoknowSecondCardTitile":"Taught in English",
+    "DetailstoknowSecondCardSubTitle":"24 languages available",
+    "howemployees":"See how employees at top companies are mastering in-demand skills",
+    "learnmoreAboutBusiness":"Learn more about Coursera for Business",
+    "Advanced":"Advance your subject-matter expertise",
+    "expert":"Learn in-demand skills from university and industry experts",
+    "master":"Master a subject or tool with hands-on projects",
+    "develop":"Develop a deep understanding of key concepts",
+    "earn":"Earn a career certificate from IBM",
+    "whyPeople":"Why people choose Coursera for their career"
+
+    }
+  ,
+  "FirstCard":
+    {
+      "Title": "Get started With GenAI",
+      "SubTitle": "Explore",
+      "Button": "view All GenAI",
+      "CardTitle": "Generative AI Fundamentals",
+      "Specialization": "Specialization",
+     "button1": "Beginner",
+      "button2": "Popular",
+      "button3": "New",
+      "button4": "Tools"
+
+    }
+  ,
+  "SecondCard":
+    {
+      "Title": "University of London",
+      "subject": "Ready to advance your career in cybersecurity? Gain practical experience through lab sessions that simulate real-life scenarios.",
+      "Button": "learn more"
+    }
+  ,
+  "CardThree":
+    {
+         "Title": "Coursera Coach",
+      "subject": "Master new skills with AI-powered guidance Get interactive, on-demand assistance that’s tailored to your unique goals.",
+      "Button": "learn more"
+
+
+    }
+  ,
+  "Navbar1":
+    {
+      "coursera": "Coursera",
+      "Explore": "Explore",
+      "Language": "English",
+      "searchBar": "What do you want to learn?",
+      "profile": "Profile",
+      "logout": "Logout",
+      "english": "English",
+      "arabic": "Arabic"
+    }
+  ,
+  "Navbar2": {
+    "home": "Home ",
+    "myLearning": "My Learning",
+    "onlineDegrees": "Online Degrees",
+    "career": "Careers"
+  }
+
+  ,
+
+
+  "Footer": {
+    "courseeraSection": {
+      "title": "Coursera",
+      "about": "About  ",
+      "whatWeOffer": "What We Offer",
+      "leadership": "Leadership",
+      "careers": "Careers",
+      "catalog": "Catalog",
+      "courseraPlus": "Coursera Plus",
+      "professionalCertificates": "Professional Certificates",
+      "masterTrackCertificates": "MasterTrack® Certificates",
+      "degrees": "Degrees",
+      "forEnterprise": "For Enterprise",
+      "forGovernment": "For Government",
+      "forCampus": "For Campus",
+      "becomeAPartner": "Become a Partner",
+      "socialImpact": "Social Impact"
+    },
+    "communitySection": {
+      "title": "Community",
+      "learners": "Learners",
+      "partners": "Partners",
+      "betaTesters": "Beta Testers",
+      "blog": "Blog",
+      "theCourseraPodcast": "The Coursera Podcast",
+      "techBlog": "Tech Blog",
+      "teachingCenter": "Teaching Center"
+    },
+    "moreSection": {
+      "title": "More",
+      "press": "Press",
+      "investors": "Investors",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "help": "Help",
+      "accessibility": "Accessibility",
+      "contact": "Contact",
+      "articles": "Articles",
+      "directory": "Directory",
+      "affiliates": "Affiliates",
+      "modernSlaveryStatement": "Modern Slavery Statement",
+      "manageCookiePreferences": "Manage Cookie Preferences"
+    },
+    "mobileAppSection": {
+      "title": "Mobile App",
+      "appStoreButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "googlePlayButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "certifiedBadge": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+    },
+    "copyright": "© 2020 Coursera Inc. All rights reserved"
+  }
+
+
+
+}

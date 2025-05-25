@@ -1,0 +1,46 @@
+<dialog id="shareProfile">
+  <div class="ProjectDialogContainer" style="width: 80%; margin: auto;">
+    <div class="d-flex justify-content-end mt-4">
+      <button onclick="document.getElementById('shareProfile')?.close()" class="border-0 bg-light">
+        <i class="fa-solid fa-x"></i>
+      </button>
+    </div>
+
+    <h2 style="font-size: 1.875rem;" class="my-4">Your profile link has been copied</h2>
+    <p style="font-size: 1rem; font-weight: 400; margin-bottom: 2rem;">
+      Sharing your profile is a great way to stand out by showcasing your skills and accomplishments on Coursera.
+    </p>
+
+    <div class="mb-4">
+      <h6 style="font-weight: 600; font-size: 1.25rem;">Profile link</h6>
+      <p style="font-size: 1rem; font-weight: 400; margin-bottom: 1rem;">
+        Only someone with a link to your profile can view it (it won't appear as a result on search engines).
+      </p>
+
+      <!-- Input مع زر نسخ -->
+      <div class="input-group mb-3">
+        <input #profileLinkInput type="text" class="form-control"
+               [value]="profileLink" readonly>
+        <button type="button" class="btn btn-outline-primary"
+                (click)="copyLink()">
+          Copy link
+        </button>
+      </div>
+
+      <!-- رابط اختياري لو حابب تضيف تعديل اللينك لاحقاً -->
+      <!-- <a href="#" class="link-customize">Customize your link</a> -->
+    </div>
+
+    <div class="alert alert-info py-3" style="background-color: #e9f7ff; border-color: #badbcc;">
+      <i class="fa-solid fa-circle-info me-2"></i>
+      Please note that by sharing your profile link, you consent to sharing your profile information with anyone who has access to your link. You can change your visibility settings anytime.
+    </div>
+
+    <div class="py-3 pe-4">
+      <button class="btn btn-primary px-4 py-2 fw-semibold fs-6"
+              onclick="document.getElementById('shareProfile')?.close()">
+        Got It
+      </button>
+    </div>
+  </div>
+</dialog>

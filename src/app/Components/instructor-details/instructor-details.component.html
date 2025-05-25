@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row marginTop">
+      <div class="col-2">
+        <img class="imageInstructor" src="{{getInstructorID?.instructorImage}}" alt="">
+      </div>
+      <div class="col-7 titleOFinstructor">
+        <h2 class="instructorName">{{getInstructorID?.Name}}</h2>
+        <p class="instructorJob">{{getInstructorID?.job}}</p>
+        @for(title of getInstructorID?.coursesTitle; track getInstructorID?.id){
+          <ul class="listStyle">
+            <li>
+              <a class="instructorCourses">{{title}}</a>
+            </li>
+          </ul>
+        }
+      </div>
+      <div class="col-3"></div>
+    </div>
+    <hr style="height: 1px; background-color: #8c8e91; border: none; width: 80%;margin-left: 30px;">
+  </div>
+
+  <div class="container">
+    <div class="row marginTop">
+      <h3 class="courses">Courses - English</h3>
+      @for(course of filterArray; track getInstructorID?.id){
+        <div class="col-12 col-md-6 col-lg-4 card">
+          <img class="imageCourse" src="{{course.courseImage}}" alt="">
+          <h4>
+            <div class="titleCourse" style="color:#1F1F1F;margin-bottom:6px">{{course.name}}</div>
+          </h4>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="container Explore">
+
+    <div class="row paddingMost">
+
+      <h2 class="mostPopular exploreText">Explore Coursera</h2>
+
+       @for(explore of filterCategory; track explore.categoryID){
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden">
+          <img class="exploreImage no-left-radius" src="{{explore.categoryImage}}" alt="Data Science">
+
+          <div class="p-3">
+            <div class="fw-bold">{{explore.categoryName}}</div>
+            <span class="text-muted">{{explore.courses.length}} courses</span>
+          </div>
+        </div>
+      </div>
+    }
+
+    </div>
+  </div>
+  <hr style="height: 1px; background-color: #8c8e91; border: none; width: 95%;margin-left: 30px;">
+  <app-footer></app-footer>

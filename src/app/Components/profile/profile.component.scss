@@ -1,0 +1,211 @@
+
+$mainColor: #002761;
+$color: #0056d2;
+$secScolor: #f2f5fa;
+$transition: 0.5s;
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: $color;
+}
+
+
+.content {
+    background-color: #f2f5fa;
+    min-height: 100vh;
+}
+
+button {
+    border-color: $color !important;
+    transition: $transition;
+    font-size: 16px;
+}
+
+h6 {
+    font-weight: normal;
+}
+
+button:hover {
+    background-color: rgb(243, 243, 243) !important;
+    color: $color;
+}
+
+
+.navbar {
+    padding: 18px 30px !important;
+    margin-bottom: 70px;
+}
+
+.navbar a {
+    color: gray;
+    font-weight: normal;
+    transition: $transition;
+}
+.navbar a:hover {
+    color: $color;
+}
+
+.explore {
+    color: $color !important;
+    border: 1px solid $color;
+    font-weight: bold !important;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+.search {
+    border-radius: 20px !important;
+    border: 1px solid gray;
+    height: 40px;
+    width: 400px;
+}
+
+.search::placeholder {
+    padding-left: 20px;
+}
+
+.SearchIcon {
+    background-color: $color;
+    color: white;
+    transform: translateX(-110%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.custom-navbar {
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+  
+    // .navbar-brand.logo {
+    //   font-size: 1.7rem ;
+    //   font-weight: bold;
+    // }
+  
+    .search-bar input {
+      width: 250px;
+    }
+  
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #0056b3;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ddd;
+    }
+  
+    .dropdown-menu.show {
+      display: block;
+    }
+  
+    .navbar-toggler {
+      border: none;
+    }
+  }
+
+  .logo {
+    color: $color !important;
+    font-size: 28px !important;
+}
+
+.badge {
+    background-color: $color !important;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+}
+
+
+
+.profile-container {
+  padding:5% 0 ;
+    color: #2d2f31;
+  }
+  
+  .profile-card {
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 100px;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    background: $mainColor;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 20px auto 10px;
+  }
+  
+  .profile-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .update-visibility {
+    display: block;
+    margin-top: 10px;
+    color: #0073e6;
+  }
+  
+  .info-card {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .main-content {
+    padding-left: 20px;
+  }
+  
+  .content-card {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+
+
+.back {
+    background-color: #f2f5fa;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-back {
+    background-color: $mainColor;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+p {
+    font-size: 15px;
+    width: 70%;
+}

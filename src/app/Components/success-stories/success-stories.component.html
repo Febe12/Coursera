@@ -1,0 +1,37 @@
+    <!-- success stories  -->
+  
+    <div class="SuccessStories mb-5">
+        <!-- <h2 class="mb-4">Success Stories</h2>
+        -->
+        <div class="Story" >
+             <div class="container-fluid  " >
+              <div class="row gap-lg-2 gap-md-2  d-lg-flex flex-lg-nowrap" >
+            @for(story of SuccessStories.slice(0, 4);track story.id){
+                    <div class="col-12 col-md-5 col-lg-3  rounded-3 border px-3 py-3 mb-4 mx-md-auto " >
+                      
+                      <div class="container-fluid">
+                          <div class="row ">
+                            <div class="col-3 me-3">  <img
+                              src="{{ story.personImage }}"
+                              alt=""
+                              class="rounded-circle  img-fluid"
+                            /></div>
+                            <div class="col-8 mt-2">
+                              <h6>{{ story.name }}</h6>
+                              <p style="font-size:0.875rem ;font-weight: 400; color: #5b6780;">{{ story.certificateName }}</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div>
+                        
+                        <div class="lowerPart mt-3">
+                          <p style="font-size:0.875rem ;font-weight: 400; color: #5b6780;">"{{ story.review }}"</p>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+               </div>
+          </div>
+     
+      </div>

@@ -1,0 +1,40 @@
+.success-container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 25px;
+  background-color: #f0f8ff; /* Alice Blue */
+  border: 1px solid #d0e3ff;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #2a73cc; /* Coursera blue */
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #2a73cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e5bbf;
+}

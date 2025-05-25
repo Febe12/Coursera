@@ -1,0 +1,78 @@
+$lightGray: #8495b0;
+$baseGray:#5b6780;
+$primaryColor:#0d6efd;
+$whiteColor:white;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.RolesParent {
+  margin-top: 5%;
+  .roles {
+    
+    font-weight: 600;
+  }
+  p {
+    padding-top: 1%;
+    font-size: 18px;
+  }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;//to make spaces between buttons
+
+  }
+  .buttons-container {
+    display: flex;
+    width: 80%;
+    button {
+      flex: 1 1 auto;
+      white-space: nowrap;
+      font-size: .87rem; 
+      @media (max-width: 768px) {
+        font-size: 0.7rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  button {
+    border: 1px solid $lightGray;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: rgb(226, 226, 252) !important;
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+    }
+    &.active {
+      background-color: $lightGray !important;
+      color: $whiteColor !important;
+      border: 1px solid darken($lightGray, 10%);
+    }
+  }
+  @media (max-width: 768px) {
+    .dropdown {
+      width: 100%;
+    }
+    .buttons-container {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+
+.lastPartContainer{
+   margin-top: 6%;
+  .lastPart{
+    color: $baseGray;
+    
+    width: 50%;
+    font-size:  0.875rem;
+    font-weight: 400;
+    padding: 0 1% 0 1%;
+    
+    }
+}

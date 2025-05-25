@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, .container-fluid {
+  height: 100%;
+}
+
+.left-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 15px;
+
+  .sidebar-content {
+    .logo {
+      width: 10%;
+      margin-right: 3%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 10px 15px;
+        margin-bottom: 15px;
+
+        &:hover {
+          background-color: #eef4fb;
+          cursor: pointer;
+        }
+
+        &.Course-Material-card {
+          .modules {
+            margin-left: 20px;
+            padding-left: 50px;
+
+            ul {
+              line-height: 1.8;
+
+              li {
+                padding: 5px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Scrollable Wrapper for Main + Right */
+.scrollable-wrapper {
+  height: 100%;
+}
+
+
+@media (max-width: 767.98px) {
+  .left-sidebar {
+    position: relative;
+    height: auto;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+
+  .scrollable-wrapper {
+    flex-direction: column;
+  }
+
+}
+
+
+.right-sidebar{
+
+  height: 700px;
+  .ProfessionalCertificate{
+
+    height: 100px;
+  }
+  .profilecard{
+    p{
+      font-size: 0.875rem;
+      color: #5b6780;
+    }
+  }
+ 
+
+ 
+}
+
+
+.main-content {
+ 
+ .accordion-body{
+  .body{
+
+    
+    .video-title{
+    
+      cursor: pointer;
+    p:nth-child(2){
+     color: #5b6780;
+    }
+
+    }
+    &:hover{
+      background-color: #eef4fb;
+      cursor: pointer;
+    }
+  }
+ }
+}
